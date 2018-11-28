@@ -189,6 +189,14 @@ Phpstorm激活：<http://idea.lanyus.com/>
   sudo pacman -S typora
   ```
 
+- Vscode:visual-studio-code-bin
+
+  ![](https://code.visualstudio.com/assets/home/home-screenshot-linux.png) 
+
+  ```
+  yay -S visual-studio-code-bin
+  ```
+
 最后介绍几个无聊有趣的命令：http://www.aqee.net/post/10-funny-liunx-command.html
 
 其他自己看着玩吧！
