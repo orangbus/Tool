@@ -1,10 +1,16 @@
 ## 容器的基本操作
 
+- 启动docker
+
+  ```
+  systemctl start/stop/restart docker
+  ```
+
 - 启动容器
 
 ```	
 docker run IMAGE [command]　//在新容器中执行命令
-docker start -i IMAGE
+docker start -it IMAGE
 docker stop/kill IMAGE
 docker rm IMAGEID
 ```
@@ -12,7 +18,7 @@ docker rm IMAGEID
 - 交互式容器
 
   ```
-  docker run -i -t IMAGE /bin/bash
+  docker run -it IMAGE /bin/bash
   docker run --name=orangbus -i -t IMAGE /bin/bash
   ```
 
@@ -26,7 +32,8 @@ docker rm IMAGEID
 ## 守护容器  －后台一直运行
 
 ```
-docker run -i -t IMAGE /bin/bash
+docker run -it IMAGE /bin/bash
+
 ctrl+p  ctrl+q
 docker attach IMAGEID
 ```
