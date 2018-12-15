@@ -1,66 +1,18 @@
 # Manjaro安装后需要的那些骚操作
 
-- 假设你已经安装了，如何没有的话就去 [Manjaro官网](https://manjaro.org/) 下载一个  `KDE Edition` 版本，找一个专门刻录linux系统的软件刻录到U盘上（不要用常规刻录window的软件刻录，当然年轻爱折腾请随意），开机F12 or F2 ，选择U盘启动即可安装成功了。
+- 假设你已经安装了，如何没有的话就去 [Manjaro官网](https://manjaro.org/) 下载一个  `KDE Edition` 版本，找一个专门刻录linux系统的软件()刻录到U盘上（不要用常规刻录window的软件刻录，当然年轻爱折腾请随意），开机F12 or F2 ，选择U盘启动即可安装成功了。
 ## 中国源
 ```
 sudo pacman-mirrors -i -c China -m rank && pacman -Syyu
 sudo vim /etc/pacman.conf  //打开后添加下面的随便一个源，看自己喜欢了
 sudo pacman -S archlinuxcn-keyring
 ```
-- 更多的源访问：github: https://github.com/archlinuxcn/mirrorlist-repo
-
   ```
-  ## CDN (ipv4, ipv6, http, https)
-  ## Global CDN (no nodes in mainland China)
-  [archlinuxcn]
-  Server = https://cdn.repo.archlinuxcn.org/$arch
+  ##个人使用
+ Server = http://mirrors.tuna.tsinghua.edu.cn/manjaro/stable/$repo/$arch
   ```
-
-  ```
-  ## 浙江大学 (浙江杭州) (ipv4, ipv6, http, https)
-  ## Added: 2017-06-05
-  [archlinuxcn]
-  Server = https://mirrors.zju.edu.cn/archlinuxcn/$arch
-  ```
-
-  ```	
-  ## 中国科学技术大学 (ipv4, ipv6, http, https)
-  [archlinuxcn]
-  Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch
-  ```
-
-  ```
-  ## 清华大学 (ipv4, ipv6, http, https)
-  [archlinuxcn]
-  Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch
-  ```
-
-  ```
-  ## 网易 (ipv4, http, https)
-  [archlinuxcn]
-  Server = https://mirrors.163.com/archlinux-cn/$arch
-  ```
-
-  ```
-  ## 重庆大学 (ipv4, http, https)
-  [archlinuxcn]
-  Server = https://mirrors.cqu.edu.cn/archlinuxcn/$arch
-  ```
-
-  ```
-  ## 莞工 GNU/Linux 协会 开源软件镜像站 (ipv4, http, https)
-  ## Added: 2018-11-03
-  [archlinuxcn]
-  Server = https://mirrors.dgut.edu.cn/archlinuxcn/$arch
-  ```
-
-  ```
-  ## SJTUG 软件源镜像服务 (ipv4, https)
-  ## Added: 2018-05-21
-  [archlinuxcn]
-  Server = https://mirrors.sjtug.sjtu.edu.cn/archlinux-cn/$arch
-  ```
-
+  - 更多的源访问：github: https://github.com/archlinuxcn/mirrorlist-repo
+  
 - composer中国源
 
   ```
