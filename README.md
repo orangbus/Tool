@@ -69,6 +69,10 @@ sudo pacman -S archlinuxcn-keyring
 
 - 没有效果的话重启一下终端就可以了。<!--more-->
 
+## vim配置推荐
+
+- https://github.com/meetbill/Vim
+
 ## 如何安装软件
 
 安装工具 `pacman -S packageName` or `yaourt packageName` 
