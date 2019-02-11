@@ -26,54 +26,80 @@ Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch
 
 无特殊说明都在 ～ 目录操作 ： `cd ~` 
 
-- [zsh](https://github.com/robbyrussell/oh-my-zsh) 
+### [zsh](https://github.com/robbyrussell/oh-my-zsh) 
 
-  详细的教程直接看官网说明，大概步骤：
+详细的教程直接看官网说明，大概步骤：
 
-  1、clone zsh ：
+1、install zsh for select anyone ：
 
-  ```
-  git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
-  ```
+```
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+```
 
-  2、把zsh设置默认shell
+```
+wget: sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+```
 
-  ```
-  chsh -s /bin/zsh
-  ```
+2、把zsh设置默认shell
 
-  3、主题配置  `~ .zshrc` 没有新建一个 (  默认我觉得挺好看的 )
+```
+chsh -s /bin/zsh
+```
 
-  ```
-  vim .zshrc
-  ZSH_THEME="robbyrussell"
-  ```
+3、主题配置  `~ .zshrc` 没有新建一个 (  默认我觉得挺好看的 )
 
-  4、配置自动提示　-－　[zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md)
+```
+vim .zshrc
+ZSH_THEME="robbyrussell"
+```
 
-  ```
-  git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
-  ```
+### 配置自动提示　-－　[zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md)
 
-  在`~/.zshrc` 中添加
+```
+git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
+```
 
-  ```
-  source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-  ```
+在`~/.zshrc` 中添加
 
-  tip:你可以在 `.zshrc` 文件末尾添加一下别名，这样就可以不用每次桥很长的命令
+```
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+```
 
-  ```
-  alias cls="clear && ls"
-  alias RM="rm -R" //删除文件夹
-  alias www="cd /home/wwwroot/"
-  ```
+tip:你可以在 `.zshrc` 文件末尾添加一下别名，这样就可以不用每次桥很长的命令
 
-- 没有效果的话重启一下终端就可以了。<!--more-->
+```
+alias cls="clear && ls"
+alias RM="rm -R" //删除文件夹
+alias www="cd /home/wwwroot/"
+```
+
+Ps:没有效果的话重启一下终端就可以了。
+
+### 命令助手：[Tldr](https://github.com/tldr-pages/tldr) 
+
+安装
+
+```
+npm install -g tldr
+```
+
+使用方法：看这张图你因该就明白了
+
+![](https://github.com/tldr-pages/tldr/blob/master/screenshot.png) 
+
+### 终端复用：Tmux
+
+使用手册可以使用tldr查看
+
+```
+tldr tmux
+```
+
+参考手册：http://louiszhai.github.io/2017/09/30/tmux/
 
 ## vim配置推荐
 
-- https://github.com/meetbill/Vim
+直接使用别人配置的吧：https://github.com/meetbill/Vim
 
 ## 如何安装软件
 
