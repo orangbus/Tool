@@ -1,7 +1,7 @@
 # Manjaro安装后需要的那些骚操作
 
 - 假设你已经安装了，如何没有的话就去 [Manjaro官网](https://manjaro.org/) 下载一个  `KDE Edition` 版本，找一个专门刻录linux系统的软件([Rufus](https://rufus.ie/en_IE.html))刻录到U盘上（不要用常规刻录window的软件刻录，当然年轻爱折腾请随意），开机F12 or F2 ，选择U盘启动即可安装成功了。
-## 中国源
+## 设置中国源
 ```
 sudo pacman-mirrors -i -c China -m rank && pacman -Syyu
 sudo vim /etc/pacman.conf  //打开后添加下面的【结尾】随便一个源，看自己喜欢了
@@ -20,13 +20,26 @@ Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch
   ```
   composer config -g repo.packagist composer https://packagist.laravel-china.org
   ```
-
+  
+  or
+  
+  ```
+  composer config -g repo.packagist composer https://packagist.phpcomposer.com
+  ```
+  
+  
 
 ## 终端美化
 
 无特殊说明都在 ～ 目录操作 ： `cd ~` 
 
 ### [zsh](https://github.com/robbyrussell/oh-my-zsh) 
+
+有时候 一些linux发行版提示：zsh没有安装，那么：
+
+``` 
+sudo apt-get install zsh
+```
 
 详细的教程直接看官网说明，大概步骤：
 
@@ -56,13 +69,13 @@ ZSH_THEME="robbyrussell"
 ### 配置自动提示　-－　[zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md)
 
 ```
-git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
 ```
 
 在`~/.zshrc` 中添加
 
 ```
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 ```
 
 tip:你可以在 `.zshrc` 文件末尾添加一下别名，这样就可以不用每次桥很长的命令
@@ -71,6 +84,8 @@ tip:你可以在 `.zshrc` 文件末尾添加一下别名，这样就可以不用
 alias cls="clear && ls"
 alias RM="rm -R" //删除文件夹
 alias www="cd /home/wwwroot/"
+alias dst="sudo systemctl start docker"
+alias drest="sudo systemctl restart docker"
 ```
 
 Ps:没有效果的话重启一下终端就可以了。
@@ -85,7 +100,7 @@ npm install -g tldr
 
 使用方法：看这张图你因该就明白了
 
-![](https://github.com/tldr-pages/tldr/blob/master/screenshot.png) 
+![](https://github.com/tldr-pages/tldr/blob/master/screenshot.png)  
 
 ### 终端复用：Tmux
 
@@ -190,6 +205,12 @@ Phpstorm激活：<http://idea.lanyus.com/>
   ```
   yay -S visual-studio-code-bin
   ```
+
+  这个给大家推荐一个vscode插件同步插件：[Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync) 
+
+  一图胜千言（图片来自官方说明）
+
+  ![](https://tmr.js.org/p/fa3b8081/source.gif)    
 
 - virtualbox
 
