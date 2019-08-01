@@ -13,6 +13,8 @@ sudo pacman -S archlinuxcn-keyring
 SigLevel = Optional TrustedOnly
 Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch
   ```
+  - 最近发现这个源可以，拉取Docker镜像的时候可以使用**（推荐）**：[Alpine Linux 源使用文档](https://mirrors.ustc.edu.cn/help/alpine.html) 
+  
   - 更多的源访问：github: https://github.com/archlinuxcn/mirrorlist-repo
   
 - composer中国源
@@ -227,6 +229,8 @@ Phpstorm激活：<http://idea.lanyus.com/>
   ​	那么你在安装 virtualbox 的时候就需要选择：virtualbox-419-xxxxxxx的版本安装
 
   推荐一篇参考教程：https://www.jianshu.com/p/ef1f58ff84d7
+  
+  也可以看看**virtualbox与lnmp的那些事** 
 
 # linux通用shadowsock-qt5 浏览器（chrome）上Google
 
@@ -238,11 +242,11 @@ Phpstorm激活：<http://idea.lanyus.com/>
   【推荐】可以在软件管理中搜索shadowsock-qt5 
   ```
 
-  ps: 确保你的ＳＳＲ可以没问题，【注意查看自己的本地代理地址】，插件中会用到
+  ps: 确保你的ＳＳＲ没问题，【注意查看自己的**本地代理地址**】，插件中会用到
 
   ![](https://github.com/orangbus/Tool/blob/master/images/shadowsock.png?raw=true)
 
-- 安装插件：Proxy SwitchySharp
+- 安装插件：Proxy SwitchySharp（[骚年，链接给你自行搞定](https://www.switchysharp.com/install.html)） 
 
   Ｐｓ: 【代理地址】设置成【代理设置的本地代理地址】，也就是上图本地代理地址：127.0.0.1:1080，【插件切换配置代理】
 
@@ -259,6 +263,10 @@ Phpstorm激活：<http://idea.lanyus.com/>
 需要Dock的可以在软件管理中搜索：`Plank`  主题安装,然后在开始菜单搜索dock即可
 
 ![](https://github.com/orangbus/Tool/blob/master/images/manjaroDesk.png?raw=true)
+
+---
+
+轮子地址：[https://yaro97.github.io/2018/05/28/manjaro-xfce%E5%AE%89%E8%A3%85%E8%AE%B0%E5%BD%95/](https://yaro97.github.io/2018/05/28/manjaro-xfce安装记录/) 
 
 最后介绍几个无聊有趣的命令：http://www.aqee.net/post/10-funny-liunx-command.html
 
