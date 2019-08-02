@@ -68,7 +68,7 @@ vim .zshrc
 ZSH_THEME="robbyrussell"
 ```
 
-### 配置自动提示　-－　[zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md)
+### 配置自动提示:[zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md) 
 
 ```
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
@@ -236,7 +236,7 @@ Phpstorm激活：<http://idea.lanyus.com/>
   
   也可以看看**virtualbox与lnmp的那些事** 
 
-# linux通用shadowsock-qt5 浏览器（chrome）上Google
+## linux通用shadowsock-qt5 浏览器（chrome）上Google
 
 - 安装shadowsock-qt5 
 
@@ -256,7 +256,7 @@ Phpstorm激活：<http://idea.lanyus.com/>
 
 ![](https://github.com/orangbus/Tool/blob/master/images/Proxy%20SwitchySharp.png?raw=true)
 
-# Manjaro theme for KDE
+## Manjaro theme for KDE
 
 可直接在设置中搜索安装
 观感：Arc Dack
@@ -280,6 +280,12 @@ Phpstorm激活：<http://idea.lanyus.com/>
 
 淘宝券（欢迎大家支持）：https://orangbus.cn
 
+biliBiliUp:  <https://space.bilibili.com/32604448> 
+
 个人网盘：http://pan.orangbus.cn
 
 个人图库：http://img.orangbus.cn
+
+个人博客：https://orangbus.gitee.io 
+
+​            or: https://orangbus.github.com
