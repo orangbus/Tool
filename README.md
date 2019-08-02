@@ -130,7 +130,11 @@ sudo pacman -S atom git vim　typora
 yaourt phpstorm
 ```
 
+![phpstorm](https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1564724228297&di=638d55a8668b6400ce9349a6be6f517d&imgtype=0&src=http%3A%2F%2Fimg.9553.com%2Fuploadfile%2F2017%2F0122%2F20170122042712116.png) 
+
 Phpstorm激活：<http://idea.lanyus.com/> 
+
+自建激活IntelliJ IDEA授权服务器：<http://blog.lanyus.com/archives/174.html>
 
 ## 常用软件
 
@@ -271,3 +275,11 @@ Phpstorm激活：<http://idea.lanyus.com/>
 最后介绍几个无聊有趣的命令：http://www.aqee.net/post/10-funny-liunx-command.html
 
 其他自己看着玩吧！
+
+---
+
+淘宝券（欢迎大家支持）：https://orangbus.cn
+
+个人网盘：http://pan.orangbus.cn
+
+个人图库：http://img.orangbus.cn
