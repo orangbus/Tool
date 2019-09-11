@@ -2,9 +2,9 @@
 
 > ## 安装Docker+docker-compose
 
-**安装教程：**https://docs.docker.com/install/linux/docker-ce/debian/
-
-​                      https://yeasy.gitbooks.io/docker_practice/install/centos.html
+安装教程：
+https://docs.docker.com/install/linux/docker-ce/debian/
+https://yeasy.gitbooks.io/docker_practice/install/centos.html
 
  一键安装脚本：
 
