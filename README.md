@@ -29,7 +29,12 @@ Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch
   composer config -g repo.packagist composer https://packagist.phpcomposer.com
   ```
   
-  
+- cnpm
+
+  ```
+  npm install -g cnpm --registry=https://registry.npm.taobao.org
+  cnpm sync connect
+  ```
 
 ## 终端美化
 
@@ -138,103 +143,107 @@ Phpstorm激活：<http://idea.lanyus.com/>
 
 ## 常用软件
 
-- Wechat：https://github.com/geeeeeeeeek/electronic-wechat
+> Wechat：https://github.com/geeeeeeeeek/electronic-wechat
 
-  ![](https://cloud.githubusercontent.com/assets/7262715/14876747/ff691ade-0d49-11e6-8435-cb1fac91b3c2.png) 
+![](https://cloud.githubusercontent.com/assets/7262715/14876747/ff691ade-0d49-11e6-8435-cb1fac91b3c2.png) 
 
-   ```
-  git clone https://github.com/geeeeeeeeek/electronic-wechat.git
-  cd electronic-wechat
-  npm install && npm start
-   ```
+```
+git clone https://github.com/geeeeeeeeek/electronic-wechat.git
+cd electronic-wechat
+npm install && npm start
+```
 
-  下次启动的时候只需要到 wechat目录下执行：`npm start` 即可.
+下次启动的时候只需要到 wechat目录下执行：`npm start` 即可.
 
-- Chromium
+> Chromium
 
-  ![](https://github.com/chromium/chromium/raw/master/chrome/app/theme/chromium/product_logo_64.png) 
+![](https://github.com/chromium/chromium/raw/master/chrome/app/theme/chromium/product_logo_64.png) 
 
-  ```
-  sudo pacman -S chromium
-  ```
+```
+sudo pacman -S chromium
+```
 
-- OBS
+> OBS
 
-  ![](https://obsproject.com/assets/images/new_icon_small.png) 
+![](https://obsproject.com/assets/images/new_icon_small.png) 
 
-  ```
-  sudo pacman -S obs-studio
-  ```
+```
+sudo pacman -S obs-studio
+```
 
-- 网易云
+> 网易云
 
-  ```
-  sudo pacman -S netease-cloud-music
-  ```
+```
+sudo pacman -S netease-cloud-music
+```
 
-- 搜狗输入法
+> 搜狗输入法
 
-  ```
-  sudo pacman -S fcitx-sogoupinyin
-  sudo pacman -S fcitx-im
-  sudo pacman -S fcitx-configtool
-  
-  sudo vi ~/.xprofile //添加一下内容
-  －－－－－－－－－－－－－－－－－－
-  export GTK_IM_MODULE=fcitx
-  export QT_IM_MODULE=fcitx
-  export XMODIFIERS=”@im=fcitx”
-  －－－－－－－－－－－－－－－－－－
-  没有生效的话注销一下系统就ＯＪＢＫ了
-  ```
+```
+sudo pacman -S fcitx-sogoupinyin
+sudo pacman -S fcitx-im
+sudo pacman -S fcitx-configtool
 
-  Ｐｓ：搜狗拼音安装错误处理
+sudo vi ~/.xprofile //添加一下内容
+－－－－－－－－－－－－－－－－－－
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS=”@im=fcitx”
+－－－－－－－－－－－－－－－－－－
+没有生效的话注销一下系统就ＯＪＢＫ了
+```
 
-  １、`sduo pacman -S fcitx-sogoupinyin` 提示找不到安装包
+Ｐｓ：搜狗拼音安装错误处理
 
-  　　`/etc/pacman.conf` 源文件有问题，可以尝试换一个源
+１、`sduo pacman -S fcitx-sogoupinyin` 提示找不到安装包
 
-  2、安装成功后只能在部分应用上打字
+　　`/etc/pacman.conf` 源文件有问题，可以尝试换一个源
 
-  　　`\～.xprofile` 文件配置不正确
+2、安装成功后只能在部分应用上打字
 
-- Markdown编辑器（个人认为最好用的markdown编辑器）
+　　`\～.xprofile` 文件配置不正确
 
-  ```
-  sudo pacman -S typora
-  ```
+> Markdown编辑器（个人认为最好用的markdown编辑器）
 
-- Vscode:visual-studio-code-bin
+```
+sudo pacman -S typora
+```
 
-  ![](https://code.visualstudio.com/assets/home/home-screenshot-linux.png) 
+个人比较喜欢的vue主题：http://theme.typora.io/theme/Vue/
 
-  ```
-  yay -S visual-studio-code-bin
-  ```
+安装主题：首先下载主题包并解压，解压后有一个【vue文件】和【vue.css】，然后打开typora>theme>open theme folder，把【vue文件夹】【vue.css】复制到【主题目录】的同级目录即可。
 
-  这个给大家推荐一个vscode插件同步插件：[Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync) 
+> Vscode:visual-studio-code-bin
 
-  一图胜千言（图片来自官方说明）
+![](https://code.visualstudio.com/assets/home/home-screenshot-linux.png) 
 
-  ![](https://tmr.js.org/p/fa3b8081/source.gif)    
+```
+yay -S visual-studio-code-bin
+```
 
-- virtualbox
+这个给大家推荐一个vscode插件同步插件：[Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync) 
 
-  ![](https://www.virtualbox.org/graphics/vbox_logo2_gradient.png)　
+一图胜千言（图片来自官方说明）
 
-  ```
-  sudo pacman -S virtualbox //也可以在软件管理中搜索安装
-  ```
+![](https://tmr.js.org/p/fa3b8081/source.gif)    
 
-  ｐｓ：安装需要对应自己的内核版本，比如：
+> virtualbox
 
-  ​	bash: `username -a`  可以看到：Linux orangbus 4.19.8-2-MANJARO
+![](https://www.virtualbox.org/graphics/vbox_logo2_gradient.png)　
 
-  ​	那么你在安装 virtualbox 的时候就需要选择：virtualbox-419-xxxxxxx的版本安装
+```
+sudo pacman -S virtualbox //也可以在软件管理中搜索安装
+```
 
-  推荐一篇参考教程：https://www.jianshu.com/p/ef1f58ff84d7
-  
-  也可以看看**virtualbox与lnmp的那些事** 
+ｐｓ：安装需要对应自己的内核版本，比如：
+
+​	bash: `username -a`  可以看到：Linux orangbus 4.19.8-2-MANJARO
+
+​	那么你在安装 virtualbox 的时候就需要选择：virtualbox-419-xxxxxxx的版本安装
+
+推荐一篇参考教程：https://www.jianshu.com/p/ef1f58ff84d7
+
+也可以看看**virtualbox与lnmp的那些事** 
 
 ## linux通用shadowsock-qt5 浏览器（chrome）上Google
 
