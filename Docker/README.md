@@ -90,15 +90,17 @@ ssl_prefer_server_ciphers on;
 
 > ## 个人别名
 
-```
-vim ~/.bashrc
-```
+`vim ~/.bashrc` 
 
 ```
+alias cls="clear && ls"
 alias RM='rm -rf'
 alias dc='docker-compose'
+alias dca='dc up -d nginx phpmyadmin'
 alias dcps='docker-compose ps'
 alias dcres='docker-compose restart && dcps'
 alias dcn='docker-compose restart nginx && scps'
+alias dcd='dc down'
 ```
 
+立刻生效执行：`source ~/.zshrc` 

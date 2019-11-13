@@ -2,31 +2,33 @@
 
 # Manjaro安装后需要的那些骚操作
 
-- 假设你已经安装了，如何没有的话就去 [Manjaro官网](https://manjaro.org/) 下载一个  `KDE Edition` 版本，找一个专门刻录linux系统的软件([Rufus](https://rufus.ie/en_IE.html))刻录到U盘上（不要用常规刻录window的软件刻录，当然年轻爱折腾请随意），开机F12 or F2 ，选择U盘启动即可安装成功了。
+- 假设你已经安装了，如何没有的话就去 [Manjaro官网](https://manjaro.org/) 下载一个  `KDE Edition` 版本，找一个专门刻录linux系统的软件([Rufus](https://rufus.ie/en_IE.html))刻录到U盘上（不要用常规刻录window的软件刻录，当然年轻爱折腾请随意），开机F12 or F2 ，选择U盘启动即可安装成功了。(最后发现还是manjaro-gnome好用，哈哈！！！)
 ## 设置中国源
 ```
 sudo pacman-mirrors -i -c China -m rank && pacman -Syyu
-sudo vim /etc/pacman.conf  //打开后添加下面的【结尾】随便一个源，看自己喜欢了
-sudo pacman -S archlinuxcn-keyring
+sudo vim /etc/pacman.conf  
 ```
+打开后添加下面的【结尾】随便一个源，看自己喜欢了
   ```
 # 个人使用
 [archlinuxcn]
 SigLevel = Optional TrustedOnly
 Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch
   ```
+```
+sudo pacman -S archlinuxcn-keyring
+```
+
   - 最近发现这个源可以，拉取Docker镜像的时候可以使用**（推荐）** ：[Alpine Linux 源使用文档](https://mirrors.ustc.edu.cn/help/alpine.html) 
-  
+
   - 更多的源访问：github: https://github.com/archlinuxcn/mirrorlist-repo
-  
-- composer中国源
+
+- [composer中国源](https://pkg.phpcomposer.com/) 
 
   ```
-  composer config -g repo.packagist composer https://packagist.laravel-china.org
-  # or 
   composer config -g repo.packagist composer https://packagist.phpcomposer.com
   ```
-  
+
 - nodejs
 
   ```
@@ -63,10 +65,6 @@ sudo apt-get install zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
 
-```
-wget: sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
-```
-
 2、把zsh设置默认shell
 
 ```
@@ -96,13 +94,32 @@ tip:你可以在 `.zshrc` 文件末尾添加一下别名，这样就可以不用
 
 ```
 alias cls="clear && ls"
-alias RM="rm -R" //删除文件夹
-alias www="cd /home/wwwroot/"
-alias dst="sudo systemctl start docker"
-alias drest="sudo systemctl restart docker"
+alias RM='rm -rf'
+alias dc='docker-compose'
+alias dca='dc up -d nginx phpmyadmin'
+alias dcps='docker-compose ps'
+alias dcres='docker-compose restart && dcps'
+alias dcn='docker-compose restart nginx && scps'
+alias dcd='dc down'
 ```
 
-Ps:没有效果的话重启一下终端就可以了。
+Ps:没有效果的话重启一下终端就可以了。（**更多Docker技巧请查看Docker文件夹）**
+
+## [you-get](https://github.com/soimort/you-get/wiki/%E4%B8%AD%E6%96%87%E8%AF%B4%E6%98%8E) 视频下载神器 
+
+首先安装pip，更多安装方法参考[菜鸟](https://www.runoob.com/w3cnote/python-pip-install-usage.html) 
+
+```
+sudo apt-get install python3-pip
+# 测试
+pip3 -v
+```
+
+安装 You-get
+
+```
+pip3 install you-get 
+```
 
 ## 命令助手：[Tldr](https://github.com/tldr-pages/tldr) 
 
@@ -322,8 +339,9 @@ sudo pacman -S deepin-screenshot
   ```
   # Manjaro
   sudo pacman -S shadowsock-qt5  //不一定有效，
-  【推荐】可以在软件管理中搜索shadowsock-qt5 
   ```
+
+  **【推荐】**可以在软件管理中搜索 `shadowsock-qt5 `
 
   ps: 确保你的ＳＳＲ没问题，【注意查看自己的**本地代理地址**】，插件中会用到
 
@@ -335,16 +353,20 @@ sudo pacman -S deepin-screenshot
 
 ![](https://github.com/orangbus/Tool/blob/master/images/Proxy%20SwitchySharp.png?raw=true)
 
-- 终端使用代理设置
+### 终端使用代理设置
 
-  ```
-  export http_proxy=socks5://127.0.0.1:1080
-  # 可以添加到 .bashrc
-  alias ssron="export ALL_PROXY=socks5://127.0.0.1:1080"
-  alias ssroff="unset ALL_PROXY"
-  ```
+```
+export http_proxy=socks5://127.0.0.1:1080
+# 可以添加到 .bashrc
+alias ssron="export ALL_PROXY=socks5://127.0.0.1:1080"
+alias ssroff="unset ALL_PROXY"
+```
 
-  Ps: 1080: 是ssr代理的本地地址。
+Ps: 1080: 是ssr代理的本地地址。
+
+### 系统代理方法
+
+最近在折腾linux系统的时候发现，原来你只要安装了了`shadowsock-qt5` 并成功配置好 SSR 之后，打开【设置】【代理】找到【代理】，选择 shadowsock , 地址填`127.0.0.1` 端口：`1080` （上面你自己配置的本地代理端口）,然后打开 Google.com 神奇的就打开了，虽然我以前也配置过，不知道什么原因上不了Google，但是最近折腾的时候又可以的，亲测【deepin】【Manjaro-gnome】系统方法可行。
 
 ## Manjaro theme for KDE
 
@@ -473,10 +495,14 @@ docker-compose up -d nginx mysql phpmyadmin
 ```
 # vim ~/.bashrc
 # Docker
-alias dc="docker-compose"
-alias dcps="dc ps"
-alias dcn="dc restart nginx"
-alias dca="dc up -d nginx mysql phpmyadmin"
+alias cls="clear && ls"
+alias RM='rm -rf'
+alias dc='docker-compose'
+alias dca='dc up -d nginx phpmyadmin'
+alias dcps='docker-compose ps'
+alias dcres='docker-compose restart && dcps'
+alias dcn='docker-compose restart nginx && scps'
+alias dcd='dc down'
 ```
 
 # Manjaro问题
