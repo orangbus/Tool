@@ -258,6 +258,30 @@ sudo pacman -S typora
 
 安装主题：首先下载主题包并解压，解压后有一个【vue文件】和【vue.css】，然后打开typora>theme>open theme folder，把【vue文件夹】【vue.css】复制到【主题目录】的同级目录即可。
 
+## Tea note
+
+「开发者」而生的笔记应用:https://haocha.co/
+
+![](https://tea-note.oss-cn-hangzhou.aliyuncs.com/website/overview-bigeditor.jpeg) 
+
+## Download Tool
+
+![](/home/orangbus/Github/Tool/images/uget.png) 
+
+```
+sudo pacman -S uget
+```
+
+## gitkraken -Git管理工具
+
+![](https://www.gitkraken.com/img/og/og-image.jpg) 
+
+```
+sudo pacman -S gitkraken
+```
+
+
+
 ## Vscode:visual-studio-code-bin
 
 ![](https://code.visualstudio.com/assets/home/home-screenshot-linux.png) 
@@ -375,6 +399,8 @@ Ps: 1080: 是ssr代理的本地地址。
 git config --global http.https://github.com.proxy socks5://127.0.0.1:1080
 git config --global https.https://github.com.proxy socks5://127.0.0.1:1080
 ```
+
+[给 github clone 加速:](https://struggleblog.com/2018/07/13/accelerate_github_clone/)https://struggleblog.com/2018/07/13/accelerate_github_clone/
 
 ## Manjaro theme for KDE
 
