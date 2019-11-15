@@ -19,7 +19,7 @@ Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch
 sudo pacman -S archlinuxcn-keyring
 ```
 
-  - 最近发现这个源可以，拉取Docker镜像的时候可以使用**（推荐）** ：[Alpine Linux 源使用文档](https://mirrors.ustc.edu.cn/help/alpine.html) 
+  - 最近发现这个源可以，拉取Docker镜像的时候可以使用 **(推荐)**  ：[Alpine Linux 源使用文档](https://mirrors.ustc.edu.cn/help/alpine.html) 
 
   - 更多的源访问：github: https://github.com/archlinuxcn/mirrorlist-repo
 
