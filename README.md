@@ -368,6 +368,14 @@ Ps: 1080: 是ssr代理的本地地址。
 
 最近在折腾linux系统的时候发现，原来你只要安装了了`shadowsock-qt5` 并成功配置好 SSR 之后，打开【设置】【代理】找到【代理】，选择 shadowsock , 地址填`127.0.0.1` 端口：`1080` （上面你自己配置的本地代理端口）,然后打开 Google.com 神奇的就打开了，虽然我以前也配置过，不知道什么原因上不了Google，但是最近折腾的时候又可以的，亲测【deepin】【Manjaro-gnome】系统方法可行。
 
+### git clone 代理
+
+```
+//  1080 改为自己的 socks5 监听端口
+git config --global http.https://github.com.proxy socks5://127.0.0.1:1080
+git config --global https.https://github.com.proxy socks5://127.0.0.1:1080
+```
+
 ## Manjaro theme for KDE
 
 可直接在设置中搜索安装<br>
@@ -528,4 +536,3 @@ biliBiliUp:  <https://space.bilibili.com/32604448>
 交流群：511300462
 
 <p style="text-align:center">人生的美妙之处在于未来的不知可！</p>
-
