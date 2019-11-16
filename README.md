@@ -266,7 +266,7 @@ sudo pacman -S typora
 
 ## Download Tool
 
-![](/home/orangbus/Github/Tool/images/uget.png) 
+![](https://github.com/orangbus/Tool/tree/master/images/uget.png) 
 
 ```
 sudo pacman -S uget
