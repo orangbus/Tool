@@ -5,7 +5,7 @@
 - 假设你已经安装了，如何没有的话就去 [Manjaro官网](https://manjaro.org/) 下载一个  `KDE Edition` 版本，找一个专门刻录linux系统的软件([Rufus](https://rufus.ie/en_IE.html))刻录到U盘上（不要用常规刻录window的软件刻录，当然年轻爱折腾请随意），开机F12 or F2 ，选择U盘启动即可安装成功了。(最后发现还是manjaro-gnome好用，哈哈！！！)
 ## 设置中国源
 ```
-sudo pacman-mirrors -i -c China -m rank && pacman -Syyu
+sudo pacman-mirrors -i -c China -m rank
 sudo vim /etc/pacman.conf  
 ```
 打开后添加下面的【结尾】随便一个源，看自己喜欢了
@@ -17,6 +17,8 @@ Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch
   ```
 ```
 sudo pacman -S archlinuxcn-keyring
+# 更新下系统
+sudo pacman -Syyu
 ```
 
   - 最近发现这个源可以，拉取Docker镜像的时候可以使用 **(推荐)**  ：[Alpine Linux 源使用文档](https://mirrors.ustc.edu.cn/help/alpine.html) 
@@ -54,6 +56,8 @@ sudo pacman -S archlinuxcn-keyring
 有时候 一些linux发行版提示：zsh没有安装，那么：
 
 ``` 
+sudo pacman -S zsh
+# Ubuntu debain
 sudo apt-get install zsh
 ```
 
@@ -202,7 +206,7 @@ sudo pacman -S google-chrome
 
 ## OBS
 
-![](https://obsproject.com/assets/images/new_icon_small.png) 
+![](https://github.com/orangbus/Tool/blob/master/images/obs.png?raw=true) 
 
 ```
 sudo pacman -S obs-studio
