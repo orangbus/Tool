@@ -3,18 +3,25 @@
 # Manjaro安装后需要的那些骚操作
 
 - 假设你已经安装了，如何没有的话就去 [Manjaro官网](https://manjaro.org/) 下载一个  `KDE Edition` 版本，找一个专门刻录linux系统的软件([Rufus](https://rufus.ie/en_IE.html))刻录到U盘上（不要用常规刻录window的软件刻录，当然年轻爱折腾请随意），开机F12 or F2 ，选择U盘启动即可安装成功了。(最后发现还是manjaro-gnome好用，哈哈！！！)
+- 如何你觉得本教程还不错欢迎分享 Star，。
 ## 设置中国源
 ```
 sudo pacman-mirrors -i -c China -m rank
 sudo vim /etc/pacman.conf  
 ```
-打开后添加下面的【结尾】随便一个源，看自己喜欢了
+打开后添加下面任意一个源，看自己喜欢了。 **(很重要,已经划重点了，肉体扶墙可跳过，在我天朝还是配置一下)** 
   ```
-# 个人使用
+# 个人使用或者选择Aliyun
 [archlinuxcn]
 SigLevel = Optional TrustedOnly
 Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch
   ```
+```
+# Aliyun镜像源
+# sudo vim /etc/pacman.d/mirrorlist
+Server = http://mirrors.aliyun.com/archlinux/$repo/os/$arch
+```
+
 ```
 sudo pacman -S archlinuxcn-keyring
 # 更新下系统
@@ -22,8 +29,9 @@ sudo pacman -Syyu
 ```
 
   - 最近发现这个源可以，拉取Docker镜像的时候可以使用 **(推荐)**  ：[Alpine Linux 源使用文档](https://mirrors.ustc.edu.cn/help/alpine.html) 
-
   - 更多的源访问：github: https://github.com/archlinuxcn/mirrorlist-repo
+
+- Aliyun镜像源：<https://developer.aliyun.com/mirror>
 
 - [composer中国源](https://pkg.phpcomposer.com/) 
 
@@ -103,7 +111,7 @@ alias dc='docker-compose'
 alias dca='dc up -d nginx phpmyadmin'
 alias dcps='docker-compose ps'
 alias dcres='docker-compose restart && dcps'
-alias dcn='docker-compose restart nginx && scps'
+alias dcn='docker-compose restart nginx && dcps'
 alias dcd='dc down'
 ```
 
@@ -166,7 +174,7 @@ sudo pacman -S pamac
 安装工具 `pacman -S packageName` or `yaourt -S packageName` 
 
 ```bash
-sudo pacman -S atom git vim　typora
+sudo pacman -S atom git vim　typora wget 
 ```
 
 # 软件推荐
@@ -175,6 +183,7 @@ sudo pacman -S atom git vim　typora
 
 ```
 yaourt phpstorm
+yay -S phpstorm
 ```
 
 ![phpstorm](https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1564724228297&di=638d55a8668b6400ce9349a6be6f517d&imgtype=0&src=http%3A%2F%2Fimg.9553.com%2Fuploadfile%2F2017%2F0122%2F20170122042712116.png) 
@@ -350,6 +359,16 @@ sudo pacman -S wps-office
 sudo pacman -S deepin-screenshot
 ```
 
+## [Flameshot](https://flameshot.js.org) 截图神器
+
+![https://github.com/orangbus/Tool/blob/master/images/flameshot.png?raw=true]()
+
+```
+sudo pacmna -S flameshot
+```
+
+
+
 ## App-Image for Tim QQ 
 
 使用AppImage格式分发Linux桌面应用程序，让所有常见发行版的用户运行它。 一次打包，到处运行。 覆盖所有主流桌面系统。
@@ -420,7 +439,43 @@ git config --global https.https://github.com.proxy socks5://127.0.0.1:1080
 
 ---
 
-轮子地址：[https://yaro97.github.io/2018/05/28/manjaro-xfce%E5%AE%89%E8%A3%85%E8%AE%B0%E5%BD%95/](https://yaro97.github.io/2018/05/28/manjaro-xfce安装记录/) 
+轮子地址：<https://yaro97.github.io/2018/05/28/manjaro-xfce安装记录>
+
+## 辅助工具-Gnome-twea-tool
+
+- 安装
+
+  ```
+  sudo pacman -S gnome-tweak-tool 
+  sudo pacman -S chrome-gnome-shell 
+  ```
+
+- 打开Chrome浏览器安装一个扩展：[GNOME Shell integration](https://chrome.google.com/webstore/detail/gnome-shell-integration/gphhapmejobijbbhgpjhcjognlahblep) 
+
+- 打开这个网站搜索你想要的插件安装即可：https://extensions.gnome.org/
+
+![https://github.com/orangbus/Tool/blob/master/images/gome.png?raw=true]()
+
+- 网友推荐的：
+
+Caffeine 防止自动挂起
+Clipboard Indicator 一个剪贴板
+Coverflow Alt-Tab 更好的窗口切换
+Dash to Dock 把dash栏变为一个dock
+Dynamic Top Bar 顶栏透明化
+Extension Update Notifier gnome插件更新提示
+GnomeStatsPro 一个系统监视器
+system-monitor 又一个系统监视器
+Night Light Slider 调节gnome夜间模式的亮度情况
+OpenWeather 天气插件
+Proxy Switcher 代理插件
+Random Wallpaper 自动切换壁纸,
+Simple net speed 网速监测
+Sound Input & Output Device Chooser 声音设备选择
+Status Area Horizontal Spacing 让顶栏更紧凑
+Suspend Button 添加一个休眠按钮
+TopIcons Plus 把托盘图标放到顶栏
+Window Is Ready - Notification Remover 去除烦人的window is ready提醒
 
 最后介绍几个无聊有趣的命令：http://www.aqee.net/post/10-funny-liunx-command.html
 
@@ -539,7 +594,7 @@ alias dc='docker-compose'
 alias dca='dc up -d nginx phpmyadmin'
 alias dcps='docker-compose ps'
 alias dcres='docker-compose restart && dcps'
-alias dcn='docker-compose restart nginx && scps'
+alias dcn='docker-compose restart nginx && dcps'
 alias dcd='dc down'
 ```
 
@@ -550,18 +605,36 @@ alias dcd='dc down'
   ```
   sudo pacman -S wqy-microhei
   ```
+  
+- 有时候我们更新系统的时候无法更新？
+
+  1. 软件冲突：
+
+     尝试卸载掉其中的一个然后在执行跟新操作，只要不是删除系统的核心文件就可以，加入是`/etc/` 下的某个文件引起的，做好是将冲突的文件重命名一下。
+
+     ![https://github.com/orangbus/Tool/blob/master/images/etc.png?raw=true]()
+
+  2. 缺少相关的依赖
+
+     根据提示安装相关的依赖即可，
+
+     问：我用`pacman -S xxx ` 安装相关的依赖提示没有找到相关的依赖？
+
+     答：`pacman` 不行可以尝试 `yay` `yaourt` 进行安装，一般都能解决
 
 ---
 
-淘宝券（欢迎大家支持）：https://orangbus.cn
+淘宝券（欢迎大家支持）：<https://orangbus.cn>
 
-biliBiliUp:  <https://space.bilibili.com/32604448> 
+biliBiliUp:  <<https://space.bilibili.com/32604448>
 
-个人网盘：http://pan.orangbus.cn
+个人笔记：<http://doc.orangbus.cn>
 
-个人图库：http://img.orangbus.cn
+个人图库：<http://img.orangbus.cn>
 
-个人博客：https://orangbus.gitee.io 
+个人博客：<https://orangbus.gitee.io>
+
+ Vip解析：<http://v.orangbus.cn>
 
 交流群：511300462
 

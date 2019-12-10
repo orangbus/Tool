@@ -1,0 +1,5 @@
+sudo vim /etc/docker/daemon.json
+
+alias ll='ls -lh'
+
+https://cr.console.aliyun.com/cn-hangzhou/instances/mirrors
