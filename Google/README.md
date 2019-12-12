@@ -58,7 +58,7 @@ W: 使用  `.bz2` 可以把文件大大的压缩，一方面下载的时候可�
 
 - 安装shadowsock-Qt5 (先看看长啥样)
 
-  ![]()
+  ![](https://github.com/orangbus/Tool/blob/master/images/shadowsock.png?raw=true) 
 
   ```
   # Arch manjro
@@ -72,11 +72,13 @@ W: 使用  `.bz2` 可以把文件大大的压缩，一方面下载的时候可�
 
 方法1、安装插件：（[Proxy SwitchySharp](https://www.switchysharp.com/install.html) ）本目录下也提供下载。--仅浏览器科学上网
 
+![](https://github.com/orangbus/Tool/blob/master/images/1080.png?raw=true) 
 
+![](https://github.com/orangbus/Tool/blob/master/images/Proxy%20SwitchySharp.png?raw=true) 
 
 方法2、使用**Ghelper** 插件代理。--仅浏览器科学上网
 
-
+![](https://github.com/orangbus/Tool/blob/master/images/ipport.png?raw=true) 
 
 方法3、系统代理 。--支持终端代理
 
@@ -120,7 +122,7 @@ sudo systemctl start v2raya //启动v2raya
 
 需要注意的是，webGUI里面的【设置】【地址与端口】配置的是**本地代理的端口** ，也就是说在使用**Ghelper** 插件进行代理科学上网的时候，代理地址是：127.0.0.1，端口：**本地代理的端口** 
 
-![]()
+![](https://github.com/orangbus/Tool/blob/master/images/v2rayport.png?raw=true)  
 
 至此你就可以使用v2ray进行科学上网了。
 
