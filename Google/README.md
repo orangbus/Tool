@@ -46,6 +46,82 @@ W: 使用  `.bz2` 可以把文件大大的压缩，一方面下载的时候可�
 
 详细请看：<https://github.com/orangbus/tool> 如何上google教程。
 
+---
 
+> 学习以下内容请牢记我天朝核心价值观
+>
+> 富强、民主、文明、和谐，自由、平等、公正、法治，爱国、敬业、诚信、友善
+
+我的桌面系统是 `Manjaro-gome` ，其他linux发行版请参考使用。
+
+## linux客户端使用shadowsock-qt5（SSR）科学上网
+
+- 安装shadowsock-Qt5 (先看看长啥样)
+
+  ![]()
+
+  ```
+  # Arch manjro
+  sudo pacman -S shadowsock-qt5  //不一定有效
+  ```
+
+  **【推荐】** 可以在软件管理中搜索 `shadowsock-qt5 ` 
+
+  - 确保你的SSR配置没问题
+  - 填写本地代理地址的时候请记住你填写的**端口** ，系统代理和插件代理的时候会用到。
+
+方法1、安装插件：（[Proxy SwitchySharp](https://www.switchysharp.com/install.html) ）本目录下也提供下载。--仅浏览器科学上网
+
+
+
+方法2、使用**Ghelper** 插件代理。--仅浏览器科学上网
+
+
+
+方法3、系统代理 。--支持终端代理
+
+​        最近在折腾linux系统的时候发现，原来你只要安装了了`shadowsock-qt5` 并成功配置好 SSR 之后，打开【设置】【代理】找到【代理】，选择 shadowsock , 地址填`127.0.0.1` 端口：`1080` （上面你自己配置的本地代理端口）,然后打开 Google.com 神奇的就打开了，虽然我以前也配置过，不知道什么原因上不了Google，但是最近折腾的时候又可以的，亲测【deepin】【Manjaro-gnome】系统方法可行。
+
+![](https://github.com/orangbus/Tool/blob/master/images/system.png?raw=true)
+
+- 终端代理
+
+  ```
+  export http_proxy=socks5://127.0.0.1:1080
+  # 可以添加到 .bashrc
+  alias ssron="export ALL_PROXY=socks5://127.0.0.1:1080"
+  alias ssroff="unset ALL_PROXY"
+  ```
+
+- git clone 代理
+
+  ```
+  //  1080 改为自己的 socks5 监听端口
+  git config --global http.https://github.com.proxy socks5://127.0.0.1:1080
+  git config --global https.https://github.com.proxy socks5://127.0.0.1:1080
+  ```
+
+  参考：https://struggleblog.com/2018/07/13/accelerate_github_clone/ 
+
+  https://blog.kelu.org/tech/2017/06/19/setting-socks5-proxy.html
+
+## linux客户端使用V2ray科学上网
+
+1、安装V2rayA：https://github.com/mzz2017/V2RayA
+
+```
+yay v2raya
+sudo systemctl start v2raya //启动v2raya
+```
+
+更多安装方式请参考该项目作者的介绍
+
+2、打开webGui配置v2ray信息：https://v2raya.mzz.pub/
+
+需要注意的是，webGUI里面的【设置】【地址与端口】配置的是**本地代理的端口** ，也就是说在使用**Ghelper** 插件进行代理科学上网的时候，代理地址是：127.0.0.1，端口：**本地代理的端口** 
+
+![]()
+
+至此你就可以使用v2ray进行科学上网了。
 
 如何你能找到任何加入我们的方式，请加入我们，当然不加入也无所谓。

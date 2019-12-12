@@ -15,13 +15,14 @@ curl -fsSL get.docker.com -o get-docker.sh && sudo sh get-docker.sh --mirror Ali
  建立 Docker 组加入当前用户：
 
 ```
-sudo groupadd dockersudo usermod -aG docker $USER
+sudo groupadd docker
+sudo usermod -aG docker $USER
 ```
 
  开机启动docker：
 
 ```
-sudo systemctl enable docker &&sudo systemctl start docker
+sudo systemctl enable docker && sudo systemctl start docker
 ```
 
 docker-compose
@@ -104,3 +105,46 @@ alias dcd='dc down'
 ```
 
 立刻生效执行：`source ~/.zshrc` 
+
+## Laradock折腾心得
+
+不知道大家在安装laradock的时候是否和我一样的心累呢，下载总结下自己在安装laradock的时候遇到的坑吧。
+
+1、下载源代码。
+
+如果下载源代码比较慢的话建议克隆最后一次提交的代码
+
+```
+git clone https://github.com/Laradock/laradock.git --depth 1
+```
+
+2、下载镜像。
+
+- 最好把下载源替换为中国的，比如阿里云
+- 将`.env` 里面有一项配置【CHANGE_SOURCE=true】设置为 `true` 
+
+3、第一次启动容器的顺序。
+
+这个只是个人建议，应为我们启动一个基本的LNMP项目的时候，laradock的启动顺序是
+
+```
+# docker-compose up -d nginx php mysql phpmyadmin
+php-fpm -> nginx -> mysql -> phpmyadmin
+```
+
+所以有时候这样启动的时候会卡死或者下载失败，我们可以单个慢慢的启动，比如这样
+
+```
+# alias dc = "docker-compose"
+dc up -d php-fpm
+dc up -d nginx 
+dc up -d mysql
+dc up -d phpmyadmin
+```
+
+这样可以避免下载到一般由于网络原因卡死了，后期即使启动了，但是存在各种问题，数据库打不来，连不上等问题。
+
+
+
+
+

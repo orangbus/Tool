@@ -253,9 +253,9 @@ export XMODIFIERS=”@im=fcitx”
 
 　　`\～.xprofile` 文件配置不正确
 
-3、搜狗输入法异常！请删除.config/SogouPY 并重启
+3、搜狗输入法异常！请删除.config/SogouPY 并重启的情况
 
-​	后来重新安装系统后提示这个，后来安装下qt4就解决了。
+​	安装下qt4就解决了。
 
 ​	`yaourt -S fcitx-qt4`
 
@@ -379,41 +379,7 @@ sudo pacmna -S flameshot
 
 这个大家最关心的家伙，网上说KDE的系统无法安装deepin-tim所以给大家推荐一个Appimage, 用着还行，不过看官网的介绍就已经被大佬折服了，哈哈，有兴趣的小伙伴可以去看看。
 
-## linux通用shadowsock-qt5 浏览器（chrome）上Google
-
-- 安装shadowsock-qt5 
-
-  ```
-  # Manjaro
-  sudo pacman -S shadowsock-qt5  //不一定有效，
-  ```
-
-  **【推荐】**可以在软件管理中搜索 `shadowsock-qt5 `
-
-  ps: 确保你的ＳＳＲ没问题，【注意查看自己的**本地代理地址**】，插件中会用到
-
-  ![](https://github.com/orangbus/Tool/blob/master/images/shadowsock.png?raw=true)
-
-- 安装插件：Proxy SwitchySharp（[骚年，链接给你自行搞定](https://www.switchysharp.com/install.html)） 
-
-  Ｐｓ: 【代理地址】设置成【代理设置的本地代理地址】，也就是上图本地代理地址：127.0.0.1:1080，【插件切换配置代理】
-
-![](https://github.com/orangbus/Tool/blob/master/images/Proxy%20SwitchySharp.png?raw=true)
-
-### 终端使用代理设置
-
-```
-export http_proxy=socks5://127.0.0.1:1080
-# 可以添加到 .bashrc
-alias ssron="export ALL_PROXY=socks5://127.0.0.1:1080"
-alias ssroff="unset ALL_PROXY"
-```
-
-Ps: 1080: 是ssr代理的本地地址。
-
-### 系统代理方法
-
-最近在折腾linux系统的时候发现，原来你只要安装了了`shadowsock-qt5` 并成功配置好 SSR 之后，打开【设置】【代理】找到【代理】，选择 shadowsock , 地址填`127.0.0.1` 端口：`1080` （上面你自己配置的本地代理端口）,然后打开 Google.com 神奇的就打开了，虽然我以前也配置过，不知道什么原因上不了Google，但是最近折腾的时候又可以的，亲测【deepin】【Manjaro-gnome】系统方法可行。
+## 科学上网参考Google文件夹
 
 ### git clone 代理
 
@@ -459,23 +425,42 @@ git config --global https.https://github.com.proxy socks5://127.0.0.1:1080
 - 网友推荐的：
 
 Caffeine 防止自动挂起
+
 Clipboard Indicator 一个剪贴板
+
 Coverflow Alt-Tab 更好的窗口切换
+
 Dash to Dock 把dash栏变为一个dock
+
 Dynamic Top Bar 顶栏透明化
+
 Extension Update Notifier gnome插件更新提示
+
 GnomeStatsPro 一个系统监视器
+
 system-monitor 又一个系统监视器
+
 Night Light Slider 调节gnome夜间模式的亮度情况
+
 OpenWeather 天气插件
+
 Proxy Switcher 代理插件
+
 Random Wallpaper 自动切换壁纸,
+
 Simple net speed 网速监测
+
 Sound Input & Output Device Chooser 声音设备选择
+
 Status Area Horizontal Spacing 让顶栏更紧凑
+
 Suspend Button 添加一个休眠按钮
+
 TopIcons Plus 把托盘图标放到顶栏
+
 Window Is Ready - Notification Remover 去除烦人的window is ready提醒
+
+
 
 最后介绍几个无聊有趣的命令：http://www.aqee.net/post/10-funny-liunx-command.html
 
