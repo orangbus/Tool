@@ -4,7 +4,7 @@
 
 ![](https://github.com/orangbus/Tool/blob/master/images/orangbus.png?raw=true) 
 
-- 假设你已经安装了，如何没有的话就去 [Manjaro官网](https://manjaro.org/) 下载一个  `KDE Edition` 版本，找一个专门刻录linux系统的软件([Rufus](https://rufus.ie/en_IE.html))刻录到U盘上（不要用常规刻录window的软件刻录，当然年轻爱折腾请随意），开机F12 or F2 ，选择U盘启动即可安装成功了。(最后发现还是manjaro-gnome好用，哈哈！！！)
+- 假设你已经安装了，如果没有的话就去 [Manjaro官网](https://manjaro.org/) 下载一个  `KDE Edition` 版本，找一个专门刻录linux系统的软件([Rufus](https://rufus.ie/en_IE.html))刻录到U盘上（不要用常规刻录window的软件刻录，当然年轻爱折腾请随意），开机F12 or F2 ，选择U盘启动即可安装成功了。(最后发现还是manjaro-gnome好用，哈哈！！！)
 - 如何你觉得本教程还不错欢迎分享 Star，。
 ## 设置中国源
 ```
@@ -13,11 +13,12 @@ sudo vim /etc/pacman.conf
 ```
 打开后添加下面任意一个源，看自己喜欢了。 **(很重要,已经划重点了，肉体扶墙可跳过，在我天朝还是配置一下)** 
   ```
-# 个人使用或者选择Aliyun
+# 个人使用或者选择Tencent
 [archlinuxcn]
-SigLevel = Optional TrustedOnly
-Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch
+Server = https://mirrors.cloud.tencent.com/archlinuxcn/$arch
   ```
+如果想追加其他源请编辑 `vim /etc/pacman.d/mirrorlist` (添加在最顶上)
+
 ```
 # Aliyun镜像源
 # sudo vim /etc/pacman.d/mirrorlist
@@ -30,10 +31,13 @@ sudo pacman -S archlinuxcn-keyring
 sudo pacman -Syyu
 ```
 
-  - 最近发现这个源可以，拉取Docker镜像的时候可以使用 **(推荐)**  ：[Alpine Linux 源使用文档](https://mirrors.ustc.edu.cn/help/alpine.html) 
+  - 如果你使用Laradock **(推荐)**  ：[Alpine Linux 源使用文档](https://mirrors.ustc.edu.cn/help/alpine.html) 
+
   - 更多的源访问：github: https://github.com/archlinuxcn/mirrorlist-repo
 
 - Aliyun镜像源：<https://developer.aliyun.com/mirror>
+
+- Tencent镜像源：https://mirrors.cloud.tencent.com/
 
 - [composer中国源](https://pkg.phpcomposer.com/) 
 
@@ -176,7 +180,7 @@ sudo pacman -S pamac
 安装工具 `pacman -S packageName` or `yaourt -S packageName` 
 
 ```bash
-sudo pacman -S atom git vim　typora wget 
+sudo pacman -S atom git vim　typora wget yarn php 
 ```
 
 # 软件推荐
@@ -468,7 +472,37 @@ Window Is Ready - Notification Remover 去除烦人的window is ready提醒
 
 最后介绍几个无聊有趣的命令：http://www.aqee.net/post/10-funny-liunx-command.html
 
-其他自己看着玩吧！
+## 福利彩蛋
+
+如果你已经按照上面的教程配置了差不多了，是不是感觉还差点什么呢？
+
+【好看的二次元壁纸？】加群获取。
+
+不知道有没有和我一样，想运行一点window软件呢？有的话那就操练起来
+
+```
+sudo pacman -S wine
+```
+
+wine: 允许linux运行window的程序，比如说Deepin封装的Deepin-qq就是这么干的，给大家举两个例子吧。
+
+- [PanDownload](https://pandownload.com/) 
+
+  很多老司机都知道这是一款被网络传疯的百度网盘下载神器（曾今），当年刚认识他的时候一天就下载了60G网盘文件。当我们从官网下载了这块软件之后解压，找到启动文件选择【wine】打开就可以直接在linux下运行了。
+
+- [速盘](https://speedpan.com/) （付费）
+
+  当你只是偶尔想快速下载百度网盘的资料时，但是又不想就此乖乖的给老王充值一个超级VIP，那么这块软件就是你的不二之选，价格也比较亲民，有这方面需要的小伙伴可以去看看。
+
+- PotPlayer
+
+  为什么我会推荐这款软件呢？
+
+  1、除了可以播放主流的视频格式的视频外，他还可以倍速播放视频，我也是看了网上的推荐然后使用他的，用了之后发现顺手是顺手，但是感觉80%的功能都用不上，有没有小伙伴手把手教一下这80%的功能的额外使用。
+
+  2、可以导入视频源观看视频，比如你想看看CCTV的新闻呀什么的，只要导入`DPL` 源文件即可观看，如果想要该源文件可加群下载【使用方法：直接将下载好的源文件拖进播放器即可】。
+
+  3、一款值得推荐的软件如果不能解决一个大的或者两个小的需求问题，那我也懒得去折腾。
 
 # Docker-LNMP
 
@@ -530,7 +564,7 @@ Wike: http://laradock.io/
 - 克隆Laradock
 
   ```
-  git clone https://github.com/Laradock/laradock.git
+  git clone https://github.com/Laradock/laradock.git --depth 1
   ```
 
 - 自定义配置
@@ -543,7 +577,12 @@ Wike: http://laradock.io/
 - 运行容器
 
   ```
-  docker-compose up -d nginx mysql phpmyadmin redis workspace 
+  docker-compose up -d nginx mysql phpmyadmin redis  
+  # 【本地开发】建议以下操作，一个一个的慢慢启动
+  docker-compose up -d php-ftp
+  docker-compose up -d nginx
+  docker-compose up -d mysql
+  docker-compose up -d phpmyadmin
   ```
 
 - 连接数据库
@@ -557,12 +596,12 @@ Ps: `.env` 文件是基本的配置文件，大家可以根据自己的需求更
 
 ```
 vim .env
-
+# 找到mysql，然后【MYSQL_VERSION=5.6】直接写版本就可以
+# 保存退出
 ESC
 :/mysql
 ```
 
-找到mysql，然后【MYSQL_VERSION=5.6】直接写版本就可以
 最后需要build一下，并且删除之前的mysql缓存数据
 
 ```
