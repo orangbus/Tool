@@ -113,6 +113,7 @@ tip:你可以在 `.zshrc` 文件末尾添加一下别名，这样就可以不用
 ```
 alias cls="clear && ls"
 alias RM='rm -rf'
+alias ll='ls -alh'
 alias dc='docker-compose'
 alias dca='dc up -d nginx phpmyadmin'
 alias dcps='docker-compose ps'
@@ -200,6 +201,10 @@ Phpstorm激活：Google一下吧，一般都有一大堆。
 
 ## [WeChat](https://github.com/geeeeeeeeek/electronic-wechat) 
 
+```
+yay electronic-wechat #选1
+```
+
 ![](https://cloud.githubusercontent.com/assets/7262715/14876747/ff691ade-0d49-11e6-8435-cb1fac91b3c2.png) 
 
 ```
@@ -268,6 +273,56 @@ export XMODIFIERS=”@im=fcitx”
 ​	`yaourt -S fcitx-qt4` //建议安装一下
 
 4、如果想要安装搜狗皮肤，直接到搜狗皮肤官网下载自己喜欢的皮肤，选中下载的皮肤右键【用 搜狗拼音】打开即可，没有生效重启就有了。
+
+5、安装 部分软件后无法输入中文-环境变量设置
+
+一般来说到了这步，fcitx在绝大部分的软件中是可以正常使用的。只是在`wps`、`Qt`、`jetbrains全家桶`、`deepin-TIM`、`deepin-wechat` `deepin.com.qq.im` 等软件中无法使用中文输入。
+ 针对以上软件，在下列对应文件中单独添加如下环境变量：【引号是英文状态下输入的，中文无效】
+
+```bash
+export XMODIFIERS="@im=fcitx"
+export GTK_IM_MODULE="fcitx"
+export QT_IM_MODULE="fcitx"
+```
+
+------
+
+deepin-wine系列的举例如下：
+ TIM：
+ /opt/deepinwine/apps/Deepin-TIM/run.sh
+ 微信：
+ /opt/deepinwine/apps/Deepin-WeChat/run.sh
+
+------
+
+WPS：
+ /usr/bin/wps
+ /usr/bin/wpp
+ /usr/bin/et
+
+------
+
+Jetbrain系列举例如下：（最好切换到相应的目录查看文件是否存在）
+
+- Goland:
+
+  ```
+  sudo vim /opt/goland/bin/goland.sh
+  ```
+
+- phpstorm
+
+  ```
+  sudo vim /opt/phpstorm/bin/phpstorm.sh
+  ```
+
+- webstorm
+
+  ```
+  sudo vim /opt/webstorm/bin/webstorm.sh
+  ```
+
+如果出现问题的软件不再我所述范围内的话，可以先尝试寻找其运行的sh文件，如果找不到，再尝试在/usr/bin文件夹中寻找。
 
 ## Typora
 
@@ -618,6 +673,7 @@ docker-compose up -d nginx mysql phpmyadmin
 # Docker
 alias cls="clear && ls"
 alias RM='rm -rf'
+alias ll='ls -alh'
 alias dc='docker-compose'
 alias dca='dc up -d nginx phpmyadmin'
 alias dcps='docker-compose ps'
@@ -664,6 +720,6 @@ biliBiliUp:  <<https://space.bilibili.com/32604448>
 
  Vip解析：<http://v.orangbus.cn>
 
-交流群：511300462
+交流群：[511300462](https://jq.qq.com/?_wv=1027&k=5WA1dVy) 
 
 <p style="text-align:center">人生的美妙之处在于未来的不知可！</p>
