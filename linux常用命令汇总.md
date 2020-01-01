@@ -225,8 +225,6 @@ Ps:参考blog：https://www.jianshu.com/p/69a289dc5441
 
 - mysql
 
-
-
 - php
 
 懒得弄了。直接上laradock，请查看docker文件

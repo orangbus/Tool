@@ -1,0 +1,11 @@
+alias cls="clear && ls"
+alias RM='rm -rf'
+alias ll='ls -alh'
+alias dc='docker-compose'
+alias dca='dc up -d nginx phpmyadmin'
+alias dcps='docker-compose ps'
+alias dcres='docker-compose restart && dcps'
+alias dcn='docker-compose restart nginx && dcps'
+alias dcd='dc down'
+# orangbus:https://github.com/orangbus
+

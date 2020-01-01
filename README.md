@@ -1,11 +1,9 @@
-
-
 # Manjaro安装后需要的那些骚操作
 
 ![](https://github.com/orangbus/Tool/blob/master/images/orangbus.png?raw=true) 
 
 - 假设你已经安装了，如果没有的话就去 [Manjaro官网](https://manjaro.org/) 下载一个  `KDE Edition` 版本，找一个专门刻录linux系统的软件([Rufus](https://rufus.ie/en_IE.html))刻录到U盘上（不要用常规刻录window的软件刻录，当然年轻爱折腾请随意），开机F12 or F2 ，选择U盘启动即可安装成功了。(最后发现还是manjaro-gnome好用，哈哈！！！)
-- 如何你觉得本教程还不错欢迎分享 Star，。
+- 如何你觉得本教程还不错欢迎分享 Star.
 ## 设置中国源
 ```
 sudo pacman-mirrors -i -c China -m rank
@@ -39,10 +37,14 @@ sudo pacman -Syyu
 
 - Tencent镜像源：https://mirrors.cloud.tencent.com/
 
+- 清华大学开源镜像站:<https://mirrors.tuna.tsinghua.edu.cn/> 
+
 - [composer中国源](https://pkg.phpcomposer.com/) 
 
   ```
   composer config -g repo.packagist composer https://packagist.phpcomposer.com
+  // or select one is ok
+  composer config -g repos.packagist composer https://php.cnpkg.org
   ```
 
 - nodejs
@@ -181,7 +183,7 @@ sudo pacman -S pamac
 安装工具 `pacman -S packageName` or `yaourt -S packageName` 
 
 ```bash
-sudo pacman -S atom git vim　typora wget yarn php 
+sudo pacman -S atom git vim　typora wget yarn phpstorm webstorm
 ```
 
 # 软件推荐
@@ -197,7 +199,13 @@ yay -S phpstorm
 
 Phpstorm激活：Google一下吧，一般都有一大堆。
 
-自建激活IntelliJ IDEA授权服务器：<http://blog.lanyus.com/archives/174.html>
+如果你懒得找，可以使用无限期试用，当我们第一次安装的时候，点击免费试用30天，30天到期之后删除一下文件即可
+
+```
+sudo rm -rf ~/.PhpStorm2019.3/config/eval
+sudo rm -rf ~/.WebStorm2019.3/config/eval
+# 其他软件也一样
+```
 
 ## [WeChat](https://github.com/geeeeeeeeek/electronic-wechat) 
 
@@ -246,6 +254,7 @@ sudo pacman -S netease-cloud-music
 sudo pacman -S fcitx-sogoupinyin
 sudo pacman -S fcitx-im
 sudo pacman -S fcitx-configtool
+yaourt -S fcitx-qt4
 
 sudo vi ~/.xprofile //添加一下内容
 －－－－－－－－－－－－－－－－－－
@@ -326,7 +335,7 @@ Jetbrain系列举例如下：（最好切换到相应的目录查看文件是否
 
 ## Typora
 
-个人认为最好用的markdown编辑器
+个人认为最好用的markdown编辑器之一
 
 ![](https://github.com/orangbus/Tool/blob/master/images/typora.png?raw=true) 
 
@@ -387,7 +396,8 @@ sudo pacman -S atom
 ![](https://www.virtualbox.org/graphics/vbox_logo2_gradient.png)　
 
 ```
-sudo pacman -S virtualbox //也可以在软件管理中搜索安装
+sudo pacman -S virtualbox 
+//也可以在软件管理中搜索安装[推荐]
 ```
 
 ｐｓ：安装需要对应自己的内核版本，比如：
@@ -399,6 +409,19 @@ sudo pacman -S virtualbox //也可以在软件管理中搜索安装
 推荐一篇参考教程：https://www.jianshu.com/p/ef1f58ff84d7
 
 也可以看看**virtualbox与lnmp的那些事** 
+
+## Vagrant
+
+```
+sudo pacman -S vagrant
+```
+
+vagrant 报unknown filesystem type 'vboxsf' 解决方案
+
+```
+vagrant plugin install vagrant-vbguest
+vagrant destroy && vagrant up
+```
 
 ## TeamViewer
 
@@ -414,6 +437,7 @@ sudo pacman -S teamviewer
 
 ```
 sudo pacman -S wps-office
+sudo pacman -S ttf-wps-fonts
 ```
 
 ## 深度截图
@@ -666,6 +690,18 @@ docker-compose build mysql
 docker-compose up -d nginx mysql phpmyadmin
 ```
 
+如果在我天朝使用Laradock,在启动容器之前修改以下配置修改为`true`
+
+```
+CHANGE_SOURCE=true
+```
+
+如果你部署于你的生产环境服务器中,请参照官方文档修改相关配置,保证服务器安全.
+
+## 写在最后
+
+> 特喜欢 Laradock 官方仓库上的一句话 `Use Docker First And Learn About It Later`,可能你并不清楚 Docker 是什么，更不知道 Laradock 是什么，当然我也一样并不是很了解 Docker，但是就像 Laradock 作者写的这句话先用它，然后再去学习它。
+
 ## 分享下我的docker-alias
 
 ```
@@ -705,6 +741,10 @@ alias dcd='dc down'
      问：我用`pacman -S xxx ` 安装相关的依赖提示没有找到相关的依赖？
 
      答：`pacman` 不行可以尝试 `yay` `yaourt` 进行安装，一般都能解决
+     
+  3. 如果没有大的需求,不要随便使用`sudo pacman -Syyu` 更新系统
+  
+     之前把电脑所有需要的配置都配置好了,感觉还是缺点什么,于是就`pacman -Syyu` 结果之前很多配置就被默认配置覆盖了,而且由于很多软件都是最新的,有些需要相互依赖的软件还没有即使更新,最直接的就是virtualbox崩溃了.
 
 ---
 
@@ -712,7 +752,7 @@ alias dcd='dc down'
 
 biliBiliUp:  <<https://space.bilibili.com/32604448>
 
-个人笔记：<http://doc.orangbus.cn>
+个人笔记：<http://orangbus.github.io>
 
 个人图库：<http://img.orangbus.cn>
 

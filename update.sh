@@ -10,6 +10,8 @@ echo "==== https://github.com/orangbus/Tool ===="
 github="https://github.com/orangbus/Tool.git"
 gitee="https://gitee.com/orangbus/Tool.git"
 
+echo -e;
+
 # laradock
 function laradock()
 {
