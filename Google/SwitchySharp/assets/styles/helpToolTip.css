@@ -1,0 +1,65 @@
+/*
+Copyright (c) 2011 Shyc2001 (http://twitter.com/shyc2001)
+This work is based on:
+*"Switchy! Chrome Proxy Manager and Switcher" (by Mohammad Hejazi (mohammadhi at gmail d0t com))
+*"SwitchyPlus" by @ayanamist (http://twitter.com/ayanamist)
+
+    This file is part of SwitchySharp.
+    SwitchySharp is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    SwitchySharp is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with SwitchySharp.  If not, see <http://www.gnu.org/licenses/>.
+*/
+span[data-help] {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin: -2px 0;
+    background: url("../images/help.png") center bottom no-repeat;
+    opacity: 0.33;
+    cursor: help;
+}
+
+span[data-help]:hover {
+    opacity: 1;
+}
+
+.help {
+    z-index: 1000;
+    position: absolute;
+    background: #e6f0ff;
+    padding: 0.6em 1.0em;
+    max-width: 40em;
+    -webkit-box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.33);
+    border: 1px solid #a8cfff;
+    -webkit-border-radius: 0;
+    line-height: 150%;
+    color: #456;
+    visibility: hidden;
+}
+
+.help p {
+    margin: 0.2em 0;
+}
+
+.help hr {
+    border-top: solid 1px #c6d0df;
+    margin: 9px 0;
+}
+
+.help table {
+    border-spacing: 7px;
+}
+
+.help td {
+    vertical-align: top;
+    line-height: 150%;
+}

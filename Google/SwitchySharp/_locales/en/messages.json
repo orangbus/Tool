@@ -1,0 +1,446 @@
+{
+    "manifest_appName":{
+        "message":"Proxy SwitchySharp"
+    },
+    "manifest_appDescription":{
+        "message":"Manage and switch between multiple proxies quickly & easily. Based on \"Proxy Switchy!\" & \"SwitchyPlus\""
+    },
+    "manifest_iconTitle":{
+        "message":"[Loading...]"
+    },
+    "global_direction":{
+        "message":"ltr"
+    },
+    "global_float":{
+        "message":"right"
+    },
+    "global_fontFamily":{
+        "message":"auto"
+    },
+    "global_textAlign":{
+        "message":"left"
+    },
+    "message_saveOptions":{
+        "message":"Do you want to save your options?"
+    },
+    "message_errorDownloadingRuleList":{
+        "message":"Error downloading rule list file!"
+    },
+    "message_ruleListUpdated":{
+        "message":"Rule list updated successfully."
+    },
+    "message_SwitchRulesDisabled":{
+        "message":"You must enable switch rules and online rule list first!"
+    },
+    "message_cannotReadOptionsBackup":{
+        "message":"Oops! Can't read the backup file!"
+    },
+    "message_cannotRestoreOptionsBackup":{
+        "message":"Oops! Can't restore from this backup file!\n\nThe backup file is corrupted or invalid."
+    },
+    "message_cannotSaveFile":{
+        "message":"Oops! Can't save generated file!"
+    },
+    "message_deleteSelectedProfile":{
+        "message":"Are you sure you want to delete selected profile?\n\nSelected Profile: ($1)"
+    },
+    "message_deleteSelectedRule":{
+        "message":"Are you sure you want to delete selected rule?\n\nSelected Rule: ($1)"
+    },
+    "message_firstTimeWelcome":{
+        "message":"Welcome first time user!\u003Cbr\u003E\r\nTo start using SwitchySharp set up some proxy profiles below and then press 'Save'."
+    },
+    "message_optionsSaved":{
+        "message":"Options Saved.."
+    },
+    "message_profileDeleted":{
+        "message":"Profile Deleted.."
+    },
+    "message_restoreOptionsBackup":{
+        "message":"Are you sure you want to restore SwitchySharp options from this backup?\n\nCurrent SwitchySharp options will be overwritten."
+    },
+    "message_ruleDeleted":{
+        "message":"Rule Deleted.."
+    },
+    "message_rulesFirstTimeWelcome":{
+        "message":"This is the first time you use Auto Switch Mode. Here is how to start:\u003Cbr\u003E\r\n\u003Col\u003E\r\n\t\u003Cli\u003ESet up the 'Default Rule' below, this rule will be applied if no other rule is matched.\u003C/li\u003E\r\n\t\u003Cli\u003EAdd some rules (press 'New Rule' button), for each rule you should \r\n\t    specify a URL Pattern and a Proxy Profile.\u003C/li\u003E\r\n\t\u003Cli\u003EPress 'Save' and 'Close' to close this tab.\u003C/li\u003E\r\n\u003C/ol\u003E"
+    },
+    "message_saveChangedValues":{
+        "message":"Save changed values?"
+    },
+    "message_selectBackupFile":{
+        "message":"You should set the backup file path first.."
+    },
+    "message_successRestoreOptionsBackup":{
+        "message":"SwitchySharp options restored successfully."
+    },
+    "message_apply2All":{
+        "message":"Do you want to apply this profile to all rules? \n\n Selected profile: ($1)"
+    },
+    "options_12Hours":{
+        "message":"12 Hours"
+    },
+    "options_15Minutes":{
+        "message":"15 Minutes"
+    },
+    "options_1Hour":{
+        "message":"1 Hour"
+    },
+    "options_30Minutes":{
+        "message":"30 Minutes"
+    },
+    "options_3Hours":{
+        "message":"3 Hours"
+    },
+    "options_45Minutes":{
+        "message":"45 Minutes"
+    },
+    "options_6Hours":{
+        "message":"6 Hours"
+    },
+    "options_lastSuccessfulUpdate":{
+        "message":"Last successful update: "
+    },
+    "options_updateListNow":{
+        "message":"Update List Now"
+    },
+    "options_autoConfig":{
+        "message":"Automatic Configuration"
+    },
+    "options_autoConfigUrl":{
+        "message":"Auto Config URL"
+    },
+    "options_importPAC":{
+        "message":"Import PAC File"
+    },
+    "options_autoProxyCompatible":{
+        "message":"AutoProxy Compatible List"
+    },
+    "options_autoProxyCompatible_help":{
+        "message":"Check this option if the url points to an AutoProxy rule list (like 'gfwlist')."
+    },
+    "options_clickToEdit":{
+        "message":"Click to edit"
+    },
+    "options_close":{
+        "message":"Close"
+    },
+    "options_confirmDeletion":{
+        "message":"Confirm profile/rule deletion."
+    },
+    "options_confirmDeletion_help":{
+        "message":"Show a confirmation dialog for deletion of proxy profiles or switch rules."
+    },
+    "options_refreshTab":{
+        "message":"Refresh current tab on profile change"
+    },
+    "options_refreshTab_help":{
+        "message":"Refresh the current tab when changing profile via popup menu or quick switch."
+    },
+    "options_defaultRule":{
+        "message":"Default Rule"
+    },
+    "options_defaultRuleUrlPattern":{
+        "message":"All URLs that doesn't match any other pattern"
+    },
+    "options_defaultRule_help":{
+        "message":"\u003Cp\u003EThis rule will be applied if no other rule is matched.\u003C/p\u003E\r\n\u003Cp\u003E\u003Cb\u003ENote:\u003C/b\u003E This rule can't be deleted.\u003C/p\u003E"
+    },
+    "options_deleteProfile":{
+        "message":"Delete Profile"
+    },
+    "options_deleteRule":{
+        "message":"Delete Rule"
+    },
+    "options_resetOptions":{
+        "message":"Reset Options"
+    },
+    "options_everyday":{
+        "message":"Everyday"
+    },
+    "options_exportPacFile":{
+        "message":"Export PAC File"
+    },
+    "options_exportPacFile_help":{
+        "message":" Export Switch Rules as a PAC file, so you can use it in other browsers. "
+    },
+    "options_exportRuleList":{
+        "message":"Export Rule List"
+    },
+    "options_exportRuleList_help":{
+        "message":" Export Switch Rules as a SwitchySharp Rule List file, so you can share it with friends. "
+    },
+    "options_ftpProxy":{
+        "message":"FTP Proxy"
+    },
+    "options_headerTitle":{
+        "message":"SwitchySharp Options"
+    },
+    "options_httpProxy":{
+        "message":"HTTP Proxy"
+    },
+    "options_httpsProxy":{
+        "message":"HTTPS Proxy"
+    },
+    "options_makeBackup":{
+        "message":"Make Backup"
+    },
+    "options_makeBackup_help":{
+        "message":" Make a full backup of your SwitchySharp options (including proxies, rules and all other options). "
+    },
+    "options_manualConfig":{
+        "message":"Manual Configuration"
+    },
+    "options_miscOptions":{
+        "message":"Misc Options"
+    },
+    "options_monitorProxyChanges":{
+        "message":"Monitor Proxy Changes"
+    },
+    "options_monitorProxyChanges_help":{
+        "message":"When proxy settings changes, SwitchySharp will update its icon to reflect those changes."
+    },
+    "options_moreInfo":{
+        "message":"More Info"
+    },
+    "options_newProfile":{
+        "message":"New Profile"
+    },
+    "options_newRule":{
+        "message":"New Rule"
+    },
+    "options_noProxyFor":{
+        "message":"No Proxy for"
+    },
+    "options_noProxyFor_help":{
+        "message":"Use semicolons ( ; ) to seperate entries."
+    },
+    "options_patternType":{
+        "message":"Pattern Type"
+    },
+    "options_patternTypeRegExp":{
+        "message":"RegExp"
+    },
+    "options_patternTypeWildcard":{
+        "message":"Wildcard"
+    },
+    "options_patternType_help":{
+        "message":"\u003Cp\u003EThe type of URL Pattern.\u003C/p\u003E\u003Chr /\u003E\r\n\u003Ctable\u003E\r\n\t\u003Ctr\u003E\r\n\t\t\u003Ctd\u003E\u003Ci\u003EWildcard\u003C/i\u003E\u003C/td\u003E\r\n\t\t\u003Ctd\u003Efor Wildcard matching.\u003C/td\u003E\r\n\t\u003C/tr\u003E\r\n\t\u003Ctr\u003E\r\n\t\t\u003Ctd\u003E\u003Ci\u003ERegExp\u003C/i\u003E\u003C/td\u003E\r\n\t\t\u003Ctd\u003Efor Regular Expression matching.\u003C/td\u003E\r\n\t\u003C/tr\u003E\r\n\u003C/table\u003E"
+    },
+    "options_profileColor":{
+        "message":"Profile Color"
+    },
+    "options_profileDetails":{
+        "message":"Profile Details"
+    },
+    "options_profileName":{
+        "message":"Profile Name"
+    },
+    "options_proxyPort":{
+        "message":"Port"
+    },
+    "options_proxyProfile":{
+        "message":"Proxy Profile"
+    },
+    "options_proxyProfile_help":{
+        "message":"The proxy profile to be applied when this rule is matched."
+    },
+    "options_proxyProfiles":{
+        "message":"Proxy Profiles"
+    },
+    "options_quickSwitch":{
+        "message":"Quick Switch"
+    },
+    "options_quickSwitch_help":{
+        "message":"<p>Allows you to switch among proxy profiles in one click \n(by clicking on SwitchySharp icon).</p><hr />\n<p><strong>Note:</strong> After enabling this feature you won't be able to see SwitchySharp\nmain menu when clicking on SwitchySharp icon. To open Option page again,\nright-click on the icon and then click \"Options\".</p>"
+    },
+    "options_quickSwitch_cycle_help":{
+        "message":"When you click on the icon, SwitchySharp will apply the following profiles in their order."
+    },
+    "options_cycledProfiles":{
+        "message":"Cycled Profiles (drag to sort):"
+    },
+    "options_notCycledProfiles":{
+        "message":"Not cycled Profiles (drag to the above box to enable):"
+    },
+    "options_startupProfile":{
+        "message":"Startup Profile:"
+    },
+    "options_startupProfile_help":{
+        "message":"The profile to be applied on extension startup."
+    },
+    "options_lastSelectedProfile":{
+        "message":"(Last selected profile)"
+    },
+    "options_reapplyLastProfile_help":{
+        "message":"If this option is checked SwitchySharp will apply last user-selected proxy profile on Chrome startup."
+    },
+    "options_reloadEvery":{
+        "message":"Reload Every"
+    },
+    "options_reloadEvery_help":{
+        "message":"Auto reload the Rule List every..."
+    },
+    "options_restoreBackup":{
+        "message":"Restore from Online"
+    },
+    "options_restoreBackup_help":{
+        "message":"Options file URL (e.g. 'http://example.com/switchy.bak')"
+    },
+    "options_restoreLocal":{
+        "message":"Restore from File"
+    },
+    "options_restoreLocal_help":{
+        "message":"Restore your SwitchySharp options from a local file."
+    },
+    "options_revertProxyChanges":{
+        "message":"Revert proxy changes done by other apps."
+    },
+    "options_revertProxyChanges_help":{
+        "message":"Revert any change in proxy settings done by other applications."
+    },
+    "options_ruleList":{
+        "message":"Online Rule List"
+    },
+    "options_ruleListProxyProfile_help":{
+        "message":"The proxy profile to be applied when any rule of this list is matched."
+    },
+    "options_ruleListUrl":{
+        "message":"Rule List URL"
+    },
+    "options_ruleListUrl_help":{
+        "message":"The location of Rule List (you can't use local files)."
+    },
+    "options_ruleList_help":{
+        "message":"Import predefined Switch Rules from online repository."
+    },
+    "options_ruleName":{
+        "message":"Rule Name"
+    },
+    "options_save":{
+        "message":"Save"
+    },
+    "options_socks4":{
+        "message":"SOCKS v4"
+    },
+    "options_socks5":{
+        "message":"SOCKS v5"
+    },
+    "options_socksHost":{
+        "message":"SOCKS Host"
+    },
+    "options_switchRules":{
+        "message":"Switch Rules"
+    },
+    "options_switchRulesEnable":{
+        "message":"Enable Switch Rules"
+    },
+    "options_switchRulesEnable_help":{
+        "message":"\u003Cp\u003ESwitch Rules specify which proxy should be used for each URL.\u003C/p\u003E\u003Chr /\u003E\r\n\u003Cp\u003EWhen this option is enabled you'll see two more items in main menu:\u003C/p\u003E\r\n\u003Ctable\u003E\r\n\t\u003Ctr\u003E\r\n\t\t\u003Ctd\u003E\u003Ci\u003EAuto Switch Mode\u003C/i\u003E\u003C/td\u003E\r\n\t\t\u003Ctd\u003Eclicking this item will activate Switch Rules.\u003C/td\u003E\r\n\t\u003C/tr\u003E\r\n\t\u003Ctr\u003E\r\n\t\t\u003Ctd\u003E\u003Ci\u003ENew Rule\u003C/i\u003E\u003C/td\u003E\r\n\t\t\u003Ctd\u003Equickly add a new Switch Rule for the current website.\u003C/td\u003E\r\n\t\u003C/tr\u003E\r\n\u003C/table\u003E"
+    },
+    "options_tabGeneral":{
+        "message":"General"
+    },
+    "options_tabImportExport":{
+        "message":"Import/Export"
+    },
+    "options_tabNetwork":{
+        "message":"Network"
+    },
+    "options_tabProxyProfiles":{
+        "message":"Proxy Profiles"
+    },
+    "options_tabSwitchRules":{
+        "message":"Switch Rules"
+    },
+    "options_untitledProfile":{
+        "message":"[Untitled Profile]"
+    },
+    "options_urlPattern":{
+        "message":"URL Pattern"
+    },
+    "options_urlPattern_help":{
+        "message":"\u003Cp\u003EPattern of the page url.\u003C/p\u003E\u003Chr /\u003E\r\n\u003Ctable\u003E\r\n\t\u003Ctr\u003E\r\n\t\t\u003Ctd colspan='2'\u003E\u003Cb\u003EWildcard Reference\u003C/b\u003E\u003C/td\u003E\r\n\t\u003C/tr\u003E\r\n\t\u003Ctr\u003E\r\n\t\t\u003Ctd\u003E\u003Ci\u003EThe asterisk (*) \u003C/i\u003E\u003C/td\u003E\r\n\t\t\u003Ctd\u003Ematches zero or more characters.\u003C/td\u003E\r\n\t\u003C/tr\u003E\r\n\t\u003Ctr\u003E\r\n\t\t\u003Ctd\u003E\u003Ci\u003EThe question mark (?) \u003C/i\u003E\u003C/td\u003E\r\n\t\t\u003Ctd\u003Ematches exactly one character.\u003C/td\u003E\r\n\t\u003C/tr\u003E\r\n\t\u003Ctr\u003E\r\n\t\t\u003Ctd colspan='2'\u003E\u003Cbr /\u003E\u003Cb\u003EExamples\u003C/b\u003E\u003C/td\u003E\r\n\t\u003C/tr\u003E\r\n\t\u003Ctr\u003E\r\n\t\t\u003Ctd\u003E\u003Ci\u003E*://www.google.com/* \u003C/i\u003E\u003C/td\u003E\r\n\t\t\u003Ctd\u003EMatches any URL that is on 'www.google.com' host and \r\n\t\tuses any scheme (http, https ...).\u003C/td\u003E\r\n\t\u003C/tr\u003E\r\n\t\u003Ctr\u003E\r\n\t\t\u003Ctd\u003E\u003Ci\u003Ehttps://*.google.com/foo*bar \u003C/i\u003E\u003C/td\u003E\r\n\t\t\u003Ctd\u003EMatches any URL that is on a 'google.com' host and\r\n\t\tuses the https scheme (such as 'www.google.com', \r\n\t\t'docs.google.com', or 'google.com'), as long as the path \r\n\t\tstarts with '/foo' and ends with 'bar'.\u003C/td\u003E\r\n\t\u003C/tr\u003E\r\n\t\u003Ctr\u003E\r\n\t\t\u003Ctd\u003E\u003Ci\u003Ehttp://example.org/foo/bar.html \u003C/i\u003E\u003C/td\u003E\r\n\t\t\u003Ctd\u003EMatches exactly the specified URL.\u003C/td\u003E\r\n\t\u003C/tr\u003E\r\n\u003C/table\u003E"
+    },
+    "options_useSameProxy":{
+        "message":"Use the same proxy server for all protocols"
+    },
+    "options_vpnDialupProxy":{
+        "message":"Proxy for VPN/Dial-up"
+    },
+    "popup_aboutSwitchy":{
+        "message":"About SwitchySharp"
+    },
+    "popup_add":{
+        "message":"Add"
+    },
+    "popup_autoSwitchMode":{
+        "message":"Auto Switch Mode"
+    },
+    "popup_newTempRule_help":{
+        "message":"Add a temporary rule for the current domain."
+    },
+    "popup_newTempRule2_help":{
+        "message":"The profile to be applied temporarily for the current domain."
+    },
+    "popup_autoSwitchMode_help":{
+        "message":"Automatically choose the proper proxy profile \nfor each URL, based on Switch Rules."
+    },
+    "popup_cancel":{
+        "message":"Cancel"
+    },
+    "popup_copyright":{
+        "message":"Copyright &copy; 2011 @Shyc2001.<br />Some rights reserved."
+    },
+    "popup_developedBy":{
+        "message":"Developed by"
+    },
+    "popup_basedOn":{
+        "message":"Based on the work of"
+    },
+    "popup_duplicateRules":{
+        "message":"* There is already a rule for this URL Pattern."
+    },
+    "popup_newRule":{
+        "message":"New Rule"
+    },
+    "popup_newRule_help":{
+        "message":"Quickly add a new Switch Rule \nfor the current website."
+    },
+    "popup_options":{
+        "message":"Options"
+    },
+    "popup_or":{
+        "message":"or"
+    },
+    "popup_supportAndBugReports":{
+        "message":"Support &amp; Bug reports"
+    },
+    "popup_switchyWebPage":{
+        "message":"Switchy! web page"
+    },
+    "popup_switchyPlusWebPage":{
+        "message":"SwitchyPlus web page"
+    },
+    "popup_version":{
+        "message":"version"
+    },
+    "proxy_systemProxy":{
+        "message":"System Proxy"
+    },
+    "proxy_autoSwitch":{
+        "message":"Auto Switch"
+    },
+    "proxy_systemProxy_help":{
+        "message":"Use System Proxy (need restart)"
+    },
+    "proxy_directConnection":{
+        "message":"Direct Connection"
+    },
+    "proxy_directConnection_help":{
+        "message":"Disable Proxy"
+    },
+    "proxy_autoSwitchIconTitle":{
+        "message":"Auto Switch Mode\nActive Page Proxy: $1"
+    }
+}

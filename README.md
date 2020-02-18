@@ -5,17 +5,30 @@
 - 假设你已经安装了，如果没有的话就去 [Manjaro官网](https://manjaro.org/) 下载一个  `KDE Edition` 版本，找一个专门刻录linux系统的软件([Rufus](https://rufus.ie/en_IE.html))刻录到U盘上（不要用常规刻录window的软件刻录，当然年轻爱折腾请随意），开机F12 or F2 ，选择U盘启动即可安装成功了。(最后发现还是manjaro-gnome好用，哈哈！！！)
 - 如何你觉得本教程还不错欢迎分享 Star.
 ## 设置中国源
+
+> 肉体扶墙可跳过，在我天朝还是配置一下
+
+选择一个响应快速的源
+
 ```
-sudo pacman-mirrors -i -c China -m rank
-sudo vim /etc/pacman.conf  
+sudo pacman-mirrors -i -c China -m rank   
 ```
-打开后添加下面任意一个源，看自己喜欢了。 **(很重要,已经划重点了，肉体扶墙可跳过，在我天朝还是配置一下)** 
-  ```
-# 个人使用或者选择Tencent
+之后在添加一 个`archlinuxcn` 中国源
+
+```
+# sudo vim /etc/pacman.conf 
 [archlinuxcn]
+Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch
+```
+
+以上基本OK了，如果你你喜欢其他的源也可以追加上去
+
+```
+# Tencent
+# sudo vim /etc/pacman.d/mirrorlist
+[archlinuxcn] 
 Server = https://mirrors.cloud.tencent.com/archlinuxcn/$arch
-  ```
-如果想追加其他源请编辑 `vim /etc/pacman.d/mirrorlist` (添加在最顶上)
+```
 
 ```
 # Aliyun镜像源
@@ -23,9 +36,11 @@ Server = https://mirrors.cloud.tencent.com/archlinuxcn/$arch
 Server = http://mirrors.aliyun.com/archlinux/$repo/os/$arch
 ```
 
+更新下系统
+
 ```
 sudo pacman -S archlinuxcn-keyring
-# 更新下系统
+
 sudo pacman -Syyu
 ```
 
@@ -59,6 +74,13 @@ sudo pacman -Syyu
   ```
   npm install -g cnpm --registry=https://registry.npm.taobao.org
   cnpm sync connect
+  ```
+
+- php
+
+  ```
+  sudo pacman -S php
+  sudo pacman -S mysql
   ```
 
 至于其他嘛，看自己的需求安装，一般情况下很多东西Manjaro都配置好了，而且是最新的。
@@ -131,6 +153,13 @@ Ps:没有效果的话重启一下终端就可以了。（**更多Docker技巧请
 首先安装pip，更多安装方法参考[菜鸟](https://www.runoob.com/w3cnote/python-pip-install-usage.html) 
 
 ```
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py   # 下载安装脚本
+sudo python3 get-pip.py    # 运行安装脚本。
+```
+
+部分 Linux 发行版可直接用包管理器安装 pip，如 Debian 和 Ubuntu：
+
+```bash
 sudo apt-get install python3-pip
 # 测试
 pip3 -v
@@ -153,6 +182,10 @@ npm install -g tldr
 ![](https://github.com/orangbus/Tool/blob/master/images/tldr.png?raw=true)  
 
 ## 终端复用：Tmux
+
+```bash
+sudo pacman -S tmux
+```
 
 使用手册可以使用tldr查看
 
@@ -210,7 +243,7 @@ sudo rm -rf ~/.WebStorm2019.3/config/eval
 ## [WeChat](https://github.com/geeeeeeeeek/electronic-wechat) 
 
 ```
-yay electronic-wechat #选1
+yay electronic-wechat #选 1 -> q -> y
 ```
 
 ![](https://cloud.githubusercontent.com/assets/7262715/14876747/ff691ade-0d49-11e6-8435-cb1fac91b3c2.png) 
@@ -361,6 +394,10 @@ sudo pacman -S typora
 sudo pacman -S uget
 ```
 
+## motrix
+
+软件管理里面搜索：motrix 
+
 ## gitkraken -Git管理工具
 
 ![](https://www.gitkraken.com/img/og/og-image.jpg) 
@@ -456,15 +493,22 @@ sudo pacman -S deepin-screenshot
 sudo pacmna -S flameshot
 ```
 
-## App-Image for Tim QQ 
+## qq & tim
 
-使用AppImage格式分发Linux桌面应用程序，让所有常见发行版的用户运行它。 一次打包，到处运行。 覆盖所有主流桌面系统。
+Tim: deepin.com.qq.im
+
+Tim QQ : deepin.com.qq.office (软件管理搜索)
+
+推荐使用deepin终端和看图工具，直接在软件管理里面搜索： `deepin` 慢慢找
+
+
+
+另外推荐大家一个大佬的东西 `App-image` :使用AppImage格式分发Linux桌面应用程序，让所有常见发行版的用户运行它。 一次打包，到处运行。 覆盖所有主流桌面系统。
 
 - 官网：https://appimage.org/
 - WIke：https://github.com/AppImage/AppImageKit/wiki
-- Tim QQ :
 
-这个大家最关心的家伙，网上说KDE的系统无法安装deepin-tim所以给大家推荐一个Appimage, 用着还行，不过看官网的介绍就已经被大佬折服了，哈哈，有兴趣的小伙伴可以去看看。
+看官网的介绍就已经被大佬折服了，哈哈，有兴趣的小伙伴可以去看看。
 
 ## 科学上网参考Google文件夹
 
@@ -643,7 +687,8 @@ Wike: http://laradock.io/
 - 克隆Laradock
 
   ```
-  git clone https://github.com/Laradock/laradock.git --depth 1
+  git clone https://github.com/Laradock/laradock.git --depth 1 
+  # --depth 1 意思是clone最后一次提交，这样clone会快一点
   ```
 
 - 自定义配置
@@ -720,13 +765,25 @@ alias dcd='dc down'
 
 # Manjaro问题
 
+- 系统无法开机或者进入不了图形界面
+
+  很多次系统安装配置好了，但是开机的时候蒙了，竟然黑屏了，啥也没有，我以为卡住了，等了30分钟也没有启动，后来得知，原来我手贱开启了 `移除不需要的依赖` ，
+
+  若果你开启了：1、把移除的依赖全部装回来。2、重装系统。
+
+  【软件管理】【首选项】【高级】下面的 `移除不需要的依赖` <span style="color:red;">不能开启，不能开启，不能开启！！！<span>
+
+- 软件管理有些你推荐的软件搜索不到。
+
+  打开【软件管理】【首选项】【AUR】`启用AUR支持` 即可，软件你用的不是我基本配置的源，请跟换源。
+
 - Manjaro更新后，中文显示为方框
 
   ```
   sudo pacman -S wqy-microhei
   ```
   
-- 有时候我们更新系统的时候无法更新？
+- 有时候我们更新系统的时候无法更新？（没有特殊需要，别XJB更新）
 
   1. 软件冲突：
 
@@ -745,6 +802,14 @@ alias dcd='dc down'
   3. 如果没有大的需求,不要随便使用`sudo pacman -Syyu` 更新系统
   
      之前把电脑所有需要的配置都配置好了,感觉还是缺点什么,于是就`pacman -Syyu` 结果之前很多配置就被默认配置覆盖了,而且由于很多软件都是最新的,有些需要相互依赖的软件还没有即使更新,最直接的就是virtualbox崩溃了.
+     
+  4. 跳过检测更新
+  
+     ```
+     sudo pacman -Syyu -dd
+     ```
+  
+     
 
 ---
 

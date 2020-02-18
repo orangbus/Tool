@@ -1,0 +1,96 @@
+/*
+Copyright (c) 2011 Shyc2001 (http://twitter.com/shyc2001)
+This work is based on:
+*"Switchy! Chrome Proxy Manager and Switcher" (by Mohammad Hejazi (mohammadhi at gmail d0t com))
+*"SwitchyPlus" by @ayanamist (http://twitter.com/ayanamist)
+
+    This file is part of SwitchySharp.
+    SwitchySharp is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    SwitchySharp is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with SwitchySharp.  If not, see <http://www.gnu.org/licenses/>.
+*/
+#infoTipContainer {
+    margin-top: -1px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -100px;
+    line-height: 21px;
+    font-size: 9pt;
+    text-align: center;
+    z-index: 100;
+}
+
+#infoTipContainer > div {
+    display: inline-block;
+    -webkit-box-shadow: 0 1px 4px #ddd;
+    padding: 8px 27px 8px 43px;
+    border-radius: 0 0 5px 5px;
+    color: #458;
+    border: solid 1px #cde;
+    background: #edf5ff url("../images/info.png") 22px 9px no-repeat;
+    text-align: left;
+}
+
+#infoTipContainer .close {
+    float: right;
+    width: 16px;
+    height: 16px;
+    margin-right: -23px;
+    margin-top: -10px;
+    padding: 5px;
+    background: url("../images/close-tip.png") center no-repeat;
+    cursor: pointer;
+    opacity: 0.6;
+    display: none;
+}
+
+#infoTipContainer .close:hover {
+    opacity: 1;
+}
+
+#infoTipContainer.info div {
+    color: #458;
+    border: solid 1px #cde;
+    background: #edf5ff url("../images/info.png") 22px 9px no-repeat;
+}
+
+#infoTipContainer.note div {
+    padding: 14px 27px;
+    color: #456;
+    border: solid 1px #cdb;
+    background: #efd none;
+}
+
+#infoTipContainer.note ol {
+    margin: 4px;
+}
+
+#infoTipContainer.success div {
+    color: #274;
+    border: solid 1px #caefc5;
+    background: #e4ffcd url("../images/accept.png");
+    background-repeat: no-repeat;
+    background-position: 10px center;
+}
+
+#infoTipContainer.warning div {
+    color: #863;
+    border: solid 1px #edc;
+    background: #fff8dd url("../images/warning.png");
+}
+
+#infoTipContainer.error div {
+    color: #854;
+    border: solid 1px #eba;
+    background: #ffe8dd url("../images/error.png");
+}
