@@ -39,9 +39,7 @@ Server = http://mirrors.aliyun.com/archlinux/$repo/os/$arch
 更新下系统
 
 ```
-sudo pacman -S archlinuxcn-keyring
-
-sudo pacman -Syyu
+sudo pacman -Syyu && sudo pacman -S archlinuxcn-keyring
 ```
 
   - 如果你使用Laradock **(推荐)**  ：[Alpine Linux 源使用文档](https://mirrors.ustc.edu.cn/help/alpine.html) 
@@ -135,69 +133,30 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 tip:你可以在 `.zshrc` 文件末尾添加一下别名，这样就可以不用每次桥很长的命令
 
 ```
+# ============= Base =============================
 alias cls="clear && ls"
 alias RM='rm -rf'
 alias ll='ls -alh'
+# ============== docker ==========================
 alias dc='docker-compose'
 alias dca='dc up -d nginx phpmyadmin'
 alias dcps='docker-compose ps'
 alias dcres='docker-compose restart && dcps'
 alias dcn='docker-compose restart nginx && dcps'
 alias dcd='dc down'
+# ============ Docker Code Dir =====================
+alias ld="cd $HOME/Code/laradock"
+alias ldca="ld && dca"
+alias ldps="ld && dcps"
+alias ldn="ld && dcn"
+alias ldd="ld && dcd"
+alias ldres="ld && dcres"
+alias web="cd $Home/Code/web"
+# ============= zsh-autosuggestions ===============
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 ```
 
 Ps:没有效果的话重启一下终端就可以了。（**更多Docker技巧请查看Docker文件夹）**
-
-## [you-get](https://github.com/soimort/you-get/wiki/%E4%B8%AD%E6%96%87%E8%AF%B4%E6%98%8E) 视频下载神器 
-
-首先安装pip，更多安装方法参考[菜鸟](https://www.runoob.com/w3cnote/python-pip-install-usage.html) 
-
-```
-curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py   # 下载安装脚本
-sudo python3 get-pip.py    # 运行安装脚本。
-```
-
-部分 Linux 发行版可直接用包管理器安装 pip，如 Debian 和 Ubuntu：
-
-```bash
-sudo apt-get install python3-pip
-# 测试
-pip3 -v
-```
-
-安装 You-get
-
-```
-pip3 install you-get 
-```
-
-## 命令助手：[Tldr](https://github.com/tldr-pages/tldr) 
-
-```
-npm install -g tldr
-```
-
-使用方法：看这张图你因该就明白了
-
-![](https://github.com/orangbus/Tool/blob/master/images/tldr.png?raw=true)  
-
-## 终端复用：Tmux
-
-```bash
-sudo pacman -S tmux
-```
-
-使用手册可以使用tldr查看
-
-```
-tldr tmux
-```
-
-参考手册：http://louiszhai.github.io/2017/09/30/tmux/
-
-## vim配置推荐
-
-暂时没有推荐的，不知道有没有小伙伴推荐下。
 
 ## 如何安装软件?
 
@@ -330,10 +289,8 @@ export QT_IM_MODULE="fcitx"
 ------
 
 deepin-wine系列的举例如下：
- TIM：
- /opt/deepinwine/apps/Deepin-TIM/run.sh
- 微信：
- /opt/deepinwine/apps/Deepin-WeChat/run.sh
+ TIM：/opt/deepinwine/apps/Deepin-TIM/run.sh
+ 微信：/opt/deepinwine/apps/Deepin-WeChat/run.sh
 
 ------
 
@@ -380,11 +337,52 @@ sudo pacman -S typora
 
 安装主题：首先下载主题包并解压，解压后有一个【vue文件】和【vue.css】，然后打开typora>theme>open theme folder，把【vue文件夹】【vue.css】复制到【主题目录】的同级目录即可。
 
-## Tea note
+## [you-get](https://github.com/soimort/you-get/wiki/%E4%B8%AD%E6%96%87%E8%AF%B4%E6%98%8E) 视频下载神器 
 
-「开发者」而生的笔记应用:https://haocha.co/
+首先安装pip，更多安装方法参考[菜鸟](https://www.runoob.com/w3cnote/python-pip-install-usage.html) 
 
-![](https://tea-note.oss-cn-hangzhou.aliyuncs.com/website/overview-bigeditor.jpeg) 
+```
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py   # 下载安装脚本
+sudo python3 get-pip.py    # 运行安装脚本。
+```
+
+部分 Linux 发行版可直接用包管理器安装 pip，如 Debian 和 Ubuntu：
+
+```bash
+sudo apt-get install python3-pip
+# 测试
+pip3 -v
+```
+
+安装 You-get
+
+```
+pip3 install you-get 
+```
+
+## 命令助手：[Tldr](https://github.com/tldr-pages/tldr) 
+
+```
+npm install -g tldr
+```
+
+使用方法：看这张图你因该就明白了
+
+![](https://github.com/orangbus/Tool/blob/master/images/tldr.png?raw=true)  
+
+## 终端复用：Tmux
+
+```bash
+sudo pacman -S tmux
+```
+
+使用手册可以使用tldr查看
+
+```
+tldr tmux
+```
+
+参考手册：http://louiszhai.github.io/2017/09/30/tmux/
 
 ## Download Tool
 
@@ -427,6 +425,14 @@ yay -S visual-studio-code-bin
 ```
 sudo pacman -S atom
 ```
+
+## FinalShell
+
+可能有点多余，但是有时候就是需要，哈哈
+
+## FileZilla
+
+可能有点多余，但是有时候就是需要,因为文件管理里面就可以连接下载,哈哈
 
 ## Virtualbox
 
@@ -497,9 +503,9 @@ sudo pacmna -S flameshot
 
 Tim: deepin.com.qq.im
 
-Tim QQ : deepin.com.qq.office (软件管理搜索)
+QQ : deepin.com.qq.office (软件管理搜索)
 
-推荐使用deepin终端和看图工具，直接在软件管理里面搜索： `deepin` 慢慢找
+推荐使用 **deepin终端** 和 **看图工具** ，直接在软件管理里面搜索： `deepin` 慢慢找
 
 
 
@@ -510,7 +516,23 @@ Tim QQ : deepin.com.qq.office (软件管理搜索)
 
 看官网的介绍就已经被大佬折服了，哈哈，有兴趣的小伙伴可以去看看。
 
+可以看看H-Player:  https://github.com/ZyqGitHub1/h-player-v2
+
+## vim配置推荐
+
+暂时没有推荐的，不知道有没有小伙伴推荐下。 
+
+## 邮箱 MailSpring
+
+软件管理搜索安装: MailSpring
+
+![](https://getmailspring.com/static/img/hero_graphic_linux@2x.png) 
+
+MailSpring: https://getmailspring.com/
+
 ## 科学上网参考Google文件夹
+
+支持: chrome浏览器 | window | manjaro | Mac没用过
 
 ### git clone 代理
 
@@ -518,17 +540,23 @@ Tim QQ : deepin.com.qq.office (软件管理搜索)
 //  1080 改为自己的 socks5 监听端口
 git config --global http.https://github.com.proxy socks5://127.0.0.1:1080
 git config --global https.https://github.com.proxy socks5://127.0.0.1:1080
+
+// 1080 改为自己的 http 监听端口
+git config --global http.https://github.com.proxy http://127.0.0.1:1080
+git config --global https.https://github.com.proxy http://127.0.0.1:1080
 ```
 
 [给 github clone 加速:](https://struggleblog.com/2018/07/13/accelerate_github_clone/)https://struggleblog.com/2018/07/13/accelerate_github_clone/
 
 ## Manjaro theme for KDE
 
-可直接在设置中搜索安装<br>
-观感：Arc Dack<br>
-桌面主题：arc dack<br>
-图标：papirus-dark<br>
-窗口装饰：Breezemite dark<br>
+可直接在设置中搜索安装
+
+| 观感     | Arc Dack        |
+| -------- | --------------- |
+| 桌面主题 | arc dack        |
+| 图标     | papirus-dark    |
+| 窗口装饰 | Breezemite dark |
 
 需要Dock的可以在软件管理中搜索：`Plank`  主题安装,然后在开始菜单搜索dock即可
 
@@ -553,45 +581,20 @@ git config --global https.https://github.com.proxy socks5://127.0.0.1:1080
 
 ![](https://github.com/orangbus/Tool/blob/master/images/gome.png?raw=true)
 
-- 网友推荐的：
-
-Caffeine 防止自动挂起
-
-Clipboard Indicator 一个剪贴板
-
-Coverflow Alt-Tab 更好的窗口切换
-
-Dash to Dock 把dash栏变为一个dock
-
-Dynamic Top Bar 顶栏透明化
-
-Extension Update Notifier gnome插件更新提示
-
-GnomeStatsPro 一个系统监视器
-
-system-monitor 又一个系统监视器
-
-Night Light Slider 调节gnome夜间模式的亮度情况
-
-OpenWeather 天气插件
-
-Proxy Switcher 代理插件
-
-Random Wallpaper 自动切换壁纸,
-
-Simple net speed 网速监测
-
-Sound Input & Output Device Chooser 声音设备选择
-
-Status Area Horizontal Spacing 让顶栏更紧凑
-
-Suspend Button 添加一个休眠按钮
-
-TopIcons Plus 把托盘图标放到顶栏
-
-Window Is Ready - Notification Remover 去除烦人的window is ready提醒
-
-
+| 名称                                   | 作用                          |
+| -------------------------------------- | ----------------------------- |
+| Caffeine                               | 防止自动挂起                  |
+| Clipboard Indicator                    | 一个剪贴板                    |
+| Coverflow Alt-Tab                      | 更好的窗口切换                |
+| Dash to Dock                           | 把dash栏变为一个dock          |
+| Night Light Slider                     | 调节gnome夜间模式的亮度情况   |
+| Proxy Switcher                         | 代理插件                      |
+| Simple net speed                       | 网速监测                      |
+| Random Wallpaper                       | 自动切换壁纸                  |
+| Status Area Horizontal Spacing         | 让顶栏更紧凑                  |
+| TopIcons Plus                          | 把托盘图标放到顶栏            |
+| Window Is Ready - Notification Remover | 去除烦人的window is ready提醒 |
+| system-monitor                         | 系统监视器                    |
 
 最后介绍几个无聊有趣的命令：http://www.aqee.net/post/10-funny-liunx-command.html
 
@@ -747,22 +750,6 @@ CHANGE_SOURCE=true
 
 > 特喜欢 Laradock 官方仓库上的一句话 `Use Docker First And Learn About It Later`,可能你并不清楚 Docker 是什么，更不知道 Laradock 是什么，当然我也一样并不是很了解 Docker，但是就像 Laradock 作者写的这句话先用它，然后再去学习它。
 
-## 分享下我的docker-alias
-
-```
-# vim ~/.bashrc
-# Docker
-alias cls="clear && ls"
-alias RM='rm -rf'
-alias ll='ls -alh'
-alias dc='docker-compose'
-alias dca='dc up -d nginx phpmyadmin'
-alias dcps='docker-compose ps'
-alias dcres='docker-compose restart && dcps'
-alias dcn='docker-compose restart nginx && dcps'
-alias dcd='dc down'
-```
-
 # Manjaro问题
 
 - 系统无法开机或者进入不了图形界面
@@ -827,4 +814,7 @@ biliBiliUp:  <<https://space.bilibili.com/32604448>
 
 交流群：[511300462](https://jq.qq.com/?_wv=1027&k=5WA1dVy) 
 
+如需转载，注明作者和出处即可,整理不易，忘见谅 .
+
 <p style="text-align:center">人生的美妙之处在于未来的不知可！</p>
+
