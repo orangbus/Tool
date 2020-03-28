@@ -466,6 +466,12 @@ vagrant plugin install vagrant-vbguest
 vagrant destroy && vagrant up
 ```
 
+## Navicat 
+
+数据库链接工具
+
+软件库中搜索：navicat (navicat121_premium)
+
 ## TeamViewer
 
 ![](https://github.com/orangbus/Tool/blob/master/images/TeamViewer.png?raw=true) 
@@ -565,6 +571,40 @@ git config --global https.https://github.com.proxy http://127.0.0.1:1080
 ---
 
 轮子地址：<https://yaro97.github.io/2018/05/28/manjaro-xfce安装记录>
+
+## Manjaro theme for gnome
+
+> theme: https://www.gnome-look.org/
+
+- install theme (安装主题)
+
+  ```bash
+  # path: /usr/share/themes 
+  cd /usr/share/themes 
+  ```
+
+主题推荐：https://github.com/daniruiz/flat-remix-gtk
+
+- install icon and cursors (安装图标和鼠标图标)
+
+  ```bash
+  # path: /usr/share/icons
+  cd /usr/share/icons
+  
+  # userPath: $HOME/.local/share/icons 
+  cd $HOME/.local/share/icons
+  ```
+
+图标推荐 (MacOS MOD)：https://www.gnome-look.org/p/1241071/
+
+**How to use (使用)：**
+
+​		从上面的主题网站下载你的喜欢的主题或者图标文件解压，把解压后的文件复制到对应的目录就可以了，然后打开【优化（tweak-tool ）】【外观】选择自己喜欢的样式即可。
+
+![](https://github.com/orangbus/Tool/blob/master/images/desk.png?raw=true) 
+
+- 如果不能复制，请用root身份打开在进行操作.
+- 复制后没有效果，重启 tweak-tool 这个东西，manjaro中文名叫：【优化】
 
 ## 辅助工具-Gnome-twea-tool
 
