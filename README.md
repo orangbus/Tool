@@ -709,7 +709,8 @@ wine: 允许linux运行window的程序，比如说Deepin封装的Deepin-qq就是
 
 - 有时候pull image 的时候很慢可以添加国内源
 
-  ```
+  ```json
+  ＃　sudo vim /etc/docker/daemon.json
   {
       "registry-mirrors": [
       "https://kfwkfulq.mirror.aliyuncs.com",
@@ -720,6 +721,13 @@ wine: 允许linux运行window的程序，比如说Deepin封装的Deepin-qq就是
       ]
   }
   ```
+
+没有生效就重启一下：
+
+```
+sudo systemctl daemon-reload
+sudo systemctl restart docker
+```
 
 ## Laradock
 
