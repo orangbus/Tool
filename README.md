@@ -621,20 +621,21 @@ git config --global https.https://github.com.proxy http://127.0.0.1:1080
 
 ![](https://github.com/orangbus/Tool/blob/master/images/gome.png?raw=true)
 
-| 名称                                   | 作用                          |
-| -------------------------------------- | ----------------------------- |
-| Caffeine                               | 防止自动挂起                  |
-| Clipboard Indicator                    | 一个剪贴板                    |
-| Coverflow Alt-Tab                      | 更好的窗口切换                |
-| Dash to Dock                           | 把dash栏变为一个dock          |
-| Night Light Slider                     | 调节gnome夜间模式的亮度情况   |
-| Proxy Switcher                         | 代理插件                      |
-| Simple net speed                       | 网速监测                      |
-| Random Wallpaper                       | 自动切换壁纸                  |
-| Status Area Horizontal Spacing         | 让顶栏更紧凑                  |
-| TopIcons Plus                          | 把托盘图标放到顶栏            |
-| Window Is Ready - Notification Remover | 去除烦人的window is ready提醒 |
-| system-monitor                         | 系统监视器                    |
+| 名称                                   | 作用                                   |
+| -------------------------------------- | -------------------------------------- |
+| Caffeine                               | 防止自动挂起                           |
+| Clipboard Indicator                    | 一个剪贴板                             |
+| Coverflow Alt-Tab                      | 更好的窗口切换                         |
+| Dash to Dock                           | 把dash栏变为一个dock                   |
+| Night Light Slider                     | 调节gnome夜间模式的亮度情况            |
+| Proxy Switcher                         | 代理插件                               |
+| Simple net speed                       | 网速监测                               |
+| Random Wallpaper                       | 自动切换壁纸                           |
+| Status Area Horizontal Spacing         | 让顶栏更紧凑                           |
+| TopIcons Plus                          | 把托盘图标放到顶栏                     |
+| Window Is Ready - Notification Remover | 去除烦人的window is ready提醒          |
+| system-monitor                         | 系统监视器                             |
+| EasyScreenCast                         | 录屏插件（推荐使用）:右键点击开始/结束 |
 
 最后介绍几个无聊有趣的命令：http://www.aqee.net/post/10-funny-liunx-command.html
 
