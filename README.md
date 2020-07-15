@@ -158,6 +158,23 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 Ps:没有效果的话重启一下终端就可以了。（**更多Docker技巧请查看Docker文件夹）**
 
+## AUR
+
+因为 pacman 包管理器本身并不直接支持 AUR，所以我们要装个 [AUR helper](https://wiki.archlinux.org/index.php/AUR_helpers)，打开通往快乐的大门。
+
+Manjaro 自带的 pamac 图形化包管理器在设置中即可开启 AUR 支持。命令行下我选用了 [yay](https://github.com/Jguer/yay)，可以直接从官方 community 仓库中安装：
+
+```
+# 后面那个是编译包时需要的一些工具，不然会报错缺少 fakeroot 之类的
+sudo pacman -S yay base-devel
+
+# 设置 AUR 清华镜像源
+yay --aururl "https://aur.tuna.tsinghua.edu.cn" --save
+
+# 开启 pacman 和 yay 的彩色输出
+sudo sed -i "s/#Color/Color/g" /etc/pacman.conf
+```
+
 ## 如何安装软件?
 
 Arch终端推荐有三种方式：`pacman` 、`yay`、 `yaourt`
@@ -178,7 +195,49 @@ sudo pacman -S pamac
 sudo pacman -S atom git vim　typora wget yarn phpstorm webstorm
 ```
 
+pacman 的[一些基本操作](https://www.cnblogs.com/kirito-c/p/11181978.html)供参考
+
+```
+pacman -S package_name        # 安装软件
+pacman -S extra/package_name  # 安装不同仓库中的版本
+pacman -Syu                   # 升级整个系统，y 是更新数据库，yy 是强制更新，u 是升级软件
+pacman -Ss string             # 在包数据库中查询软件
+pacman -Si package_name       # 显示软件的详细信息
+pacman -Sc                    # 清除软件缓存，即 /var/cache/pacman/pkg 目录下的文件
+pacman -R package_name        # 删除单个软件
+pacman -Rs package_name       # 删除指定软件及其没有被其他已安装软件使用的依赖关系
+pacman -Qs string             # 查询已安装的软件包
+pacman -Qi package_name       # 查询本地安装包的详细信息
+pacman -Ql package_name       # 获取已安装软件所包含的文件的列表
+pacman -U package.tar.zx      # 从本地文件安装
+pactree package_name          # 显示软件的依赖树
+```
+
+
+
 # 软件推荐
+
+## guake
+
+雷神终端
+
+```
+sudo pacman -S guake
+```
+
+## autojump
+
+可以对目录直接跳转，不用再 `cd /video/xxxx/canglaoshi` ,可以直接 `canglaoshi` 就直接跳转了。
+
+## Eog 看图
+
+```
+sudo pacman -S eog
+```
+
+## qv2ray
+
+科学上网，SS 用户可以用 `shadowsocks-qt5` 或者 `electron-ssr` ,新手可以看 Google 文件夹。
 
 ## PhpStorm
 
@@ -319,13 +378,12 @@ Jetbrain系列举例如下：（最好切换到相应的目录查看文件是否
 
 如果出现问题的软件不再我所述范围内的话，可以先尝试寻找其运行的sh文件，如果找不到，再尝试在/usr/bin文件夹中寻找。
 
+
 ## 坚果云（网盘）
 
 ```bash
 sudo pacman -S nutstore
 ```
-
-## Typora
 
 个人认为最好用的markdown编辑器之一
 
@@ -385,6 +443,14 @@ tldr tmux
 ```
 
 参考手册：http://louiszhai.github.io/2017/09/30/tmux/
+
+## 雷神终端 - Guake
+
+可以按`F12` 下拉一个终端，用起来会很方便 
+
+```bash
+sudo pacman -S guake
+```
 
 ## Download Tool
 
@@ -756,9 +822,6 @@ wine: 允许linux运行window的程序，比如说Deepin封装的Deepin-qq就是
      ```bash
      sudo pacman -Syyu -dd
      ```
-  
-     
-
 ---
 
 淘宝券（欢迎大家支持）：<https://orangbus.cn>
