@@ -42,7 +42,7 @@ Server = http://mirrors.aliyun.com/archlinux/$repo/os/$arch
 sudo pacman -Syyu && sudo pacman -S archlinuxcn-keyring
 ```
 
-  - 如果你使用Laradock **(推荐)**  ：[Alpine Linux 源使用文档](https://mirrors.ustc.edu.cn/help/alpine.html) 
+  - 如果你使用Laradock  ：[Alpine Linux 源使用文档](https://mirrors.ustc.edu.cn/help/alpine.html) 
 
   - 更多的源访问：github: https://github.com/archlinuxcn/mirrorlist-repo
 
@@ -91,7 +91,7 @@ sudo pacman -Syyu && sudo pacman -S archlinuxcn-keyring
 
 有时候 一些linux发行版提示：zsh没有安装，那么：
 
-``` 
+``` bash
 sudo pacman -S zsh
 # Ubuntu debain
 sudo apt-get install zsh
@@ -101,38 +101,38 @@ sudo apt-get install zsh
 
 1、install zsh for select anyone ：
 
-```
+```bash
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
 
 2、把zsh设置默认shell
 
-```
+```bash
 chsh -s /bin/zsh
 ```
 
 3、主题配置  `~ .zshrc` 没有新建一个 (  默认我觉得挺好看的 )
 
-```
+```bash
 vim .zshrc
 ZSH_THEME="robbyrussell"
 ```
 
 ### 配置自动提示:[zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md) 
 
-```
+```bash
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
 ```
 
 在`~/.zshrc` 中添加
 
-```
+```bash
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 ```
 
 tip:你可以在 `.zshrc` 文件末尾添加一下别名，这样就可以不用每次桥很长的命令
 
-```
+```.zshrc
 # ============= Base =============================
 alias cls="clear && ls"
 alias RM='rm -rf'
@@ -179,13 +179,13 @@ sudo sed -i "s/#Color/Color/g" /etc/pacman.conf
 
 Arch终端推荐有三种方式：`pacman` 、`yay`、 `yaourt`
 
-```
+```bash
 sudo pacman -S yay yaourt //pacman默认就有
 ```
 
 图形化界面安装： `Octopi` 、`pamac`
 
-```
+```bash
 sudo pacman -S pamac 
 ```
 
@@ -241,14 +241,14 @@ sudo pacman -S eog
 
 ## PhpStorm
 
-```
+```bash
 yaourt phpstorm
 yay -S phpstorm
 ```
 
 ![phpstorm](https://github.com/orangbus/Tool/blob/master/images/phpstorm.jpeg?raw=true)  
 
-Phpstorm激活：Google一下吧，一般都有一大堆。
+Phpstorm激活：参考【JetBrains】文件夹。
 
 如果你懒得找，可以使用无限期试用，当我们第一次安装的时候，点击免费试用30天，30天到期之后删除一下文件即可
 
@@ -260,25 +260,19 @@ sudo rm -rf ~/.WebStorm2019.3/config/eval
 
 ## [WeChat](https://github.com/geeeeeeeeek/electronic-wechat) 
 
-```
+```bash
+sudo pacman -S electronic-wechat
+# or
 yay electronic-wechat #选 1 -> q -> y
 ```
 
 ![](https://cloud.githubusercontent.com/assets/7262715/14876747/ff691ade-0d49-11e6-8435-cb1fac91b3c2.png) 
 
-```
-git clone https://github.com/geeeeeeeeek/electronic-wechat.git
-cd electronic-wechat
-npm install && npm start
-```
-
-下次启动的时候只需要到 wechat目录下执行：`npm start` 即可.
-
 ## Chrome Or Google
 
 ![](https://github.com/orangbus/Tool/blob/master/images/chrome.jpeg?raw=true)   
 
-```
+```bash
 sudo pacman -S chromium
 sudo pacman -S google-chrome
 ```
@@ -287,7 +281,7 @@ sudo pacman -S google-chrome
 
 ![](https://github.com/orangbus/Tool/blob/master/images/obs.png?raw=true) 
 
-```
+```bash
 sudo pacman -S obs-studio
 ```
 
@@ -295,13 +289,13 @@ sudo pacman -S obs-studio
 
 ![](https://github.com/orangbus/Tool/blob/master/images/music.png?raw=true)
 
-```
+```bash
 sudo pacman -S netease-cloud-music
 ```
 
 ## 搜狗输入法
 
-```
+```bash
 sudo pacman -S fcitx-sogoupinyin
 sudo pacman -S fcitx-im
 sudo pacman -S fcitx-configtool
@@ -348,8 +342,10 @@ export QT_IM_MODULE="fcitx"
 ------
 
 deepin-wine系列的举例如下：
- TIM：/opt/deepinwine/apps/Deepin-TIM/run.sh
- 微信：/opt/deepinwine/apps/Deepin-WeChat/run.sh
+
+- TIM：/opt/deepinwine/apps/Deepin-TIM/run.sh
+
+- 微信：/opt/deepinwine/apps/Deepin-WeChat/run.sh
 
 ------
 
@@ -364,42 +360,36 @@ Jetbrain系列举例如下：（最好切换到相应的目录查看文件是否
 
 - Goland:
 
-  ```
+  ```bash
   sudo vim /opt/goland/bin/goland.sh
   ```
 
 - phpstorm
 
-  ```
+  ```bash
   sudo vim /opt/phpstorm/bin/phpstorm.sh
   ```
 
 - webstorm
 
-  ```
+  ```bash
   sudo vim /opt/webstorm/bin/webstorm.sh
   ```
 
 如果出现问题的软件不再我所述范围内的话，可以先尝试寻找其运行的sh文件，如果找不到，再尝试在/usr/bin文件夹中寻找。
 
-## 中文字体
 
-- 文泉驿家族
+## 坚果云（网盘）
 
-  ```
-  sudo pacman -S --noconfirm wqy-microhei &&fc-cache -fv
-  sudo pacman -S wqy-microhei-lite
-  sudo pacman -S wqy-bitmapfont
-  sudo pacman -S wqy-zenhei
-  ```
-
-## Typora
+```bash
+sudo pacman -S nutstore
+```
 
 个人认为最好用的markdown编辑器之一
 
 ![](https://github.com/orangbus/Tool/blob/master/images/typora.png?raw=true) 
 
-```
+```bash
 sudo pacman -S typora
 ```
 
@@ -411,7 +401,7 @@ sudo pacman -S typora
 
 首先安装pip，更多安装方法参考[菜鸟](https://www.runoob.com/w3cnote/python-pip-install-usage.html) 
 
-```
+```bash
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py   # 下载安装脚本
 sudo python3 get-pip.py    # 运行安装脚本。
 ```
@@ -426,13 +416,13 @@ pip3 -v
 
 安装 You-get
 
-```
+```bash
 pip3 install you-get 
 ```
 
 ## 命令助手：[Tldr](https://github.com/tldr-pages/tldr) 
 
-```
+```bash
 npm install -g tldr
 ```
 
@@ -448,7 +438,7 @@ sudo pacman -S tmux
 
 使用手册可以使用tldr查看
 
-```
+```bash
 tldr tmux
 ```
 
@@ -470,6 +460,14 @@ sudo pacman -S guake
 sudo pacman -S uget
 ```
 
+## 网盘同步Rclone
+
+```bash
+sudo pacman -S rclone
+```
+
+Tip: 具体使用方法参考【Document/Rclone.md】
+
 ## motrix
 
 软件管理里面搜索：motrix 
@@ -478,7 +476,7 @@ sudo pacman -S uget
 
 ![](https://www.gitkraken.com/img/og/og-image.jpg) 
 
-```
+```bash
 sudo pacman -S gitkraken
 ```
 
@@ -486,7 +484,7 @@ sudo pacman -S gitkraken
 
 ![](https://code.visualstudio.com/assets/home/home-screenshot-linux.png) 
 
-```
+```bash
 yay -S visual-studio-code-bin
 ```
 
@@ -500,7 +498,7 @@ yay -S visual-studio-code-bin
 
 ![](https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1572533179529&di=6f4b94f9693c57b9a2b115ebe09c8f9b&imgtype=jpg&src=http%3A%2F%2Fimg4.imgtn.bdimg.com%2Fit%2Fu%3D3770765544%2C794836474%26fm%3D214%26gp%3D0.jpg)  
 
-```
+```bash
 sudo pacman -S atom
 ```
 
@@ -533,13 +531,13 @@ sudo pacman -S virtualbox
 
 ## Vagrant
 
-```
+```bash
 sudo pacman -S vagrant
 ```
 
 vagrant 报unknown filesystem type 'vboxsf' 解决方案
 
-```
+```bash
 vagrant plugin install vagrant-vbguest
 vagrant destroy && vagrant up
 ```
@@ -554,7 +552,7 @@ vagrant destroy && vagrant up
 
 ![](https://github.com/orangbus/Tool/blob/master/images/TeamViewer.png?raw=true) 
 
-```
+```bash
 sudo pacman -S teamviewer
 ```
 
@@ -562,7 +560,7 @@ sudo pacman -S teamviewer
 
 ![](data:image/png;base64,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) 
 
-```
+```bash
 sudo pacman -S wps-office
 sudo pacman -S ttf-wps-fonts
 ```
@@ -571,7 +569,7 @@ sudo pacman -S ttf-wps-fonts
 
 ![](data:image/jpeg;base64,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) 
 
-```
+```bash
 sudo pacman -S deepin-screenshot
 ```
 
@@ -579,17 +577,40 @@ sudo pacman -S deepin-screenshot
 
 ![](https://github.com/orangbus/Tool/blob/master/images/flameshot.png?raw=true)
 
-```
+```bash
 sudo pacmna -S flameshot
 ```
 
+## 思维导图 MindMaster
+
+```bash
+yay mindmaster  //也可以在软件管理里面直接搜索
+```
+
+![](https://github.com/orangbus/Tool/blob/master/images/mindmaster.png?raw=true)
+
+网页版地址：https://mm.edrawsoft.cn
+
+## 邮箱 MailSpring
+
+软件管理搜索安装: MailSpring
+
+![](https://getmailspring.com/static/img/hero_graphic_linux@2x.png) 
+
+MailSpring: https://getmailspring.com/
+
 ## qq & tim
 
-腾讯官方：`sudo pacman -S linuxqq`
+官方QQ：https://im.qq.com/linuxqq/index.html
 
-Tim: deepin.com.qq.im
+```bash
+# Manjaro|Arch
+sudo pacman -S qq-linux
+```
 
-QQ : deepin.com.qq.office (软件管理搜索)
+**Tim:** deepin.com.qq.im  (软件管理搜索)
+
+**QQ :** deepin.com.qq.office  (软件管理搜索)
 
 推荐使用 **deepin终端** 和 **看图工具** ，直接在软件管理里面搜索： `deepin` 慢慢找
 
@@ -607,14 +628,6 @@ QQ : deepin.com.qq.office (软件管理搜索)
 ## vim配置推荐
 
 暂时没有推荐的，不知道有没有小伙伴推荐下。 
-
-## 邮箱 MailSpring
-
-软件管理搜索安装: MailSpring
-
-![](https://getmailspring.com/static/img/hero_graphic_linux@2x.png) 
-
-MailSpring: https://getmailspring.com/
 
 ## 科学上网参考Google文件夹
 
@@ -690,7 +703,7 @@ git config --global https.https://github.com.proxy http://127.0.0.1:1080
 
 - 安装
 
-  ```
+  ```bash
   sudo pacman -S gnome-tweak-tool 
   sudo pacman -S chrome-gnome-shell 
   ```
@@ -753,133 +766,18 @@ wine: 允许linux运行window的程序，比如说Deepin封装的Deepin-qq就是
 
 # Docker-LNMP
 
+教程篇幅太长，已归纳到【Docker】文件夹下。
+
+主要内容有：
+
 - 安装Docker
+- 安装docker-compose
+- 使用Laradock部署一个lnmp环境
+- 基于Laradock部署一些其他应用，比如：httpbin、wordpress、emby、nextCloud等，未来可能更多。
 
-  ```
-  sudo pacman -S docker
-  ```
 
-- 安装Dockercompose
 
-  ```
-  curl -L https://github.com/docker/compose/releases/download/1.16.1/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
-  
-  chmod +x /usr/local/bin/docker-compose
-  ```
-
-  测试安装是否成功：
-
-  ```
-  docker -v
-  docker-compose -version
-  ```
-
-- 建立 Docker 组加入当前用户：
-
-  ```
-  sudo groupadd docker
-  sudo usermod -aG docker $USER
-  ```
-
-   开机启动docker：
-
-  ```
-  sudo systemctl enable docker 
-  sudo systemctl start docker
-  ```
-
-- 有时候pull image 的时候很慢可以添加国内源
-
-  ```json
-  ＃　sudo vim /etc/docker/daemon.json
-  {
-      "registry-mirrors": [
-      "https://kfwkfulq.mirror.aliyuncs.com",
-      "https://2lqq34jg.mirror.aliyuncs.com",
-      "https://pee6w651.mirror.aliyuncs.com",
-      "https://registry.docker-cn.com",
-      "http://hub-mirror.c.163.com"
-      ]
-  }
-  ```
-
-没有生效就重启一下：
-
-```
-sudo systemctl daemon-reload
-sudo systemctl restart docker
-```
-
-## Laradock
-
-Wike: http://laradock.io/
-
-快速开始：
-
-- 克隆Laradock
-
-  ```
-  git clone https://github.com/Laradock/laradock.git --depth 1 
-  # --depth 1 意思是clone最后一次提交，这样clone会快一点
-  ```
-
-- 自定义配置
-
-  ```
-  cd laradock
-  cp env-example .env
-  ```
-
-- 运行容器
-
-  ```
-  docker-compose up -d nginx mysql phpmyadmin redis  
-  # 【本地开发】建议以下操作，一个一个的慢慢启动
-  docker-compose up -d php-ftp
-  docker-compose up -d nginx
-  docker-compose up -d mysql
-  docker-compose up -d phpmyadmin
-  ```
-
-- 连接数据库
-
-  ```
-  DB_HOST=mysql //记得是：mysql, 不是127.0.0.1
-  REDIS_HOST=redis
-  ```
-
-Ps: `.env` 文件是基本的配置文件，大家可以根据自己的需求更改配置，需要注意的是，如果默认安装了mysql:8.0,但是我想安装mysql:5.6怎么办？
-
-```
-vim .env
-# 找到mysql，然后【MYSQL_VERSION=5.6】直接写版本就可以
-# 保存退出
-ESC
-:/mysql
-```
-
-最后需要build一下，并且删除之前的mysql缓存数据
-
-```
-# cd laradock
-rm -rf ~/.laradock
-docker-compose build mysql
-docker-compose up -d nginx mysql phpmyadmin
-```
-
-如果在我天朝使用Laradock,在启动容器之前修改以下配置修改为`true`
-
-```
-CHANGE_SOURCE=true
-```
-
-如果你部署于你的生产环境服务器中,请参照官方文档修改相关配置,保证服务器安全.
-
-## 写在最后
-
-> 特喜欢 Laradock 官方仓库上的一句话 `Use Docker First And Learn About It Later`,可能你并不清楚 Docker 是什么，更不知道 Laradock 是什么，当然我也一样并不是很了解 Docker，但是就像 Laradock 作者写的这句话先用它，然后再去学习它。
-
-# Manjaro问题
+# Manjaro问题汇总
 
 - 系统无法开机或者进入不了图形界面
 
@@ -895,7 +793,7 @@ CHANGE_SOURCE=true
 
 - Manjaro更新后，中文显示为方框
 
-  ```
+  ```bash
   sudo pacman -S wqy-microhei
   ```
   
@@ -921,17 +819,14 @@ CHANGE_SOURCE=true
      
   4. 跳过检测更新
   
-     ```
+     ```bash
      sudo pacman -Syyu -dd
      ```
-  
-     
-
 ---
 
 淘宝券（欢迎大家支持）：<https://orangbus.cn>
 
-biliBiliUp:  <<https://space.bilibili.com/32604448>
+biliBiliUp:  <https://space.bilibili.com/32604448>
 
 个人笔记：<http://orangbus.github.io>
 
