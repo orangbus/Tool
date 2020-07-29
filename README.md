@@ -42,15 +42,18 @@ Server = http://mirrors.aliyun.com/archlinux/$repo/os/$arch
 sudo pacman -Syyu && sudo pacman -S archlinuxcn-keyring
 ```
 
-  - 如果你使用Laradock  ：[Alpine Linux 源使用文档](https://mirrors.ustc.edu.cn/help/alpine.html) 
 
-  - 更多的源访问：github: https://github.com/archlinuxcn/mirrorlist-repo
+- 如果你使用Laradock  ：[Alpine Linux 源使用文档](https://mirrors.ustc.edu.cn/help/alpine.html) 
+
+- 更多的源访问：github: https://github.com/archlinuxcn/mirrorlist-repo
 
 - Aliyun镜像源：<https://developer.aliyun.com/mirror>
 
-- Tencent镜像源：https://mirrors.cloud.tencent.com/
+- 华为云： <https://mirrors.huaweicloud.com>
 
-- 清华大学开源镜像站:<https://mirrors.tuna.tsinghua.edu.cn/> 
+- Tencent镜像源：<https://mirrors.cloud.tencent.com>
+
+- 清华大学开源镜像站:<https://mirrors.tuna.tsinghua.edu.cn> 
 
 - [composer中国源](https://pkg.phpcomposer.com/) 
 
