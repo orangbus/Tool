@@ -4,6 +4,8 @@
 
 - 假设你已经安装了，如果没有的话就去 [Manjaro官网](https://manjaro.org/) 下载一个  `KDE Edition` 版本，找一个专门刻录linux系统的软件([Rufus](https://rufus.ie/en_IE.html))刻录到U盘上（不要用常规刻录window的软件刻录，当然年轻爱折腾请随意），开机F12 or F2 ，选择U盘启动即可安装成功了。(最后发现还是manjaro-gnome好用，哈哈！！！)
 - 如何你觉得本教程还不错欢迎分享 Star.
+[TOC]
+
 ## 设置中国源
 
 > 肉体扶墙可跳过，在我天朝还是配置一下
@@ -453,6 +455,14 @@ tldr tmux
 
 ```bash
 sudo pacman -S guake
+```
+
+## qrcp局域网文件传输工具
+
+Github地址: <https://github.com/claudiodangelis/qrcp>
+
+```bash
+yay qrcp
 ```
 
 ## Download Tool
