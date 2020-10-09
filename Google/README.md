@@ -36,6 +36,8 @@ tar cjfv ZipName.tar.bz2 sourceFiles
 tar cjfv app.tar.bz2 App
 ```
 
+官网：http://googlehelper.net/
+
 使用方法同上
 
 Q: 为什么使用  `xxx.tar.bz2` 感觉没有见过的格式？
