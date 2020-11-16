@@ -21,22 +21,13 @@ sudo pacman-mirrors -i -c China -m rank
 # sudo vim /etc/pacman.conf 
 [archlinuxcn]
 Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch
-```
 
-以上基本OK了，如果你你喜欢其他的源也可以追加上去
-
-```
-# Tencent
-# sudo vim /etc/pacman.d/mirrorlist
-[archlinuxcn] 
-Server = https://mirrors.cloud.tencent.com/archlinuxcn/$arch
-```
-
-```
 # Aliyun镜像源
 # sudo vim /etc/pacman.d/mirrorlist
 Server = http://mirrors.aliyun.com/archlinux/$repo/os/$arch
 ```
+
+以上基本OK了，如果你你喜欢其他的源也可以追加上去
 
 更新下系统
 
@@ -61,10 +52,8 @@ sudo pacman -Syyu && sudo pacman -S archlinuxcn-keyring
 
   ```
   composer config -g repo.packagist composer https://packagist.phpcomposer.com
-  // or select one is ok
-  composer config -g repos.packagist composer https://php.cnpkg.org
   ```
-
+  
 - nodejs
 
   ```
@@ -138,6 +127,7 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 tip:你可以在 `.zshrc` 文件末尾添加一下别名，这样就可以不用每次桥很长的命令
 
 ```.zshrc
+# vim ~/.zshrc`
 # ============= Base =============================
 alias cls="clear && ls"
 alias RM='rm -rf'
@@ -156,7 +146,7 @@ alias ldps="ld && dcps"
 alias ldn="ld && dcn"
 alias ldd="ld && dcd"
 alias ldres="ld && dcres"
-alias web="cd $Home/Code/web"
+alias web="cd $HOME/Code/web"
 # ============= zsh-autosuggestions ===============
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 ```
@@ -221,14 +211,6 @@ pactree package_name          # 显示软件的依赖树
 
 
 # 软件推荐
-
-## guake
-
-雷神终端
-
-```
-sudo pacman -S guake
-```
 
 ## autojump
 
@@ -301,9 +283,7 @@ sudo pacman -S netease-cloud-music
 ## 搜狗输入法
 
 ```bash
-sudo pacman -S fcitx-sogoupinyin
-sudo pacman -S fcitx-im
-sudo pacman -S fcitx-configtool
+sudo pacman -S fcitx-sogoupinyin fcitx-im fcitx-configtool
 yaourt -S fcitx-qt4
 
 sudo vi ~/.xprofile //添加一下内容
@@ -312,7 +292,24 @@ export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 export XMODIFIERS=”@im=fcitx”
 －－－－－－－－－－－－－－－－－－
-没有生效的话注销一下系统就ＯＪＢＫ了
+没有生效的话注销一下系统就ＯＪＢＫ了!!!
+```
+
+```bash
+简化版本：
+sudo pacman -S archlinuxcn-keyring
+sudo pacman -S fcitx-im fcitx-configtool fcitx-gtk2 fcitx-gtk3 fcitx-qt4 fcitx-qt5 libidn fcitx-sogoupinyin fcitx-googlepinyin
+
+mkdir ~/.config/autostart
+cp /etc/xdg/autostart/fcitx-autostart.desktop ~/.config/autostart/
+
+echo "GTK_IM_MODULE=fcitx
+QT_IM_MODULE=fcitx
+XMODIFIERS=@im=fcitx" > .pam_environment
+
+echo "export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx" > .xprofile
 ```
 
 Ｐｓ：搜狗拼音安装错误处理
@@ -517,6 +514,10 @@ sudo pacman -S atom
 
 ## FinalShell
 
+```bash
+rm -f finalshell_install_linux.sh ;wget www.hostbuf.com/downloads/finalshell_install_linux.sh;chmod +x finalshell_install_linux.sh;./finalshell_install_linux.sh;
+```
+
 可能有点多余，但是有时候就是需要，哈哈
 
 ## FileZilla
@@ -689,19 +690,27 @@ git config --global https.https://github.com.proxy http://127.0.0.1:1080
   cd /usr/share/themes 
   ```
 
-主题推荐：https://github.com/daniruiz/flat-remix-gtk
+主题推荐：
+
+**Mac:** https://www.gnome-look.org/p/1403328/
+
+**Orchis**:https://www.gnome-look.org/p/1357889/
+
+![](https://cdn.pling.com/img/f/f/5/1/2aed73fa0629038e7807e7f3efd918cb87c4.jpg) 
 
 - install icon and cursors (安装图标和鼠标图标)
 
   ```bash
-  # path: /usr/share/icons
+  # path: /usr/share/icons or ~/.themes
   cd /usr/share/icons
   
-  # userPath: $HOME/.local/share/icons 
+  # userPath: $HOME/.local/share/icons or ~/.icons
   cd $HOME/.local/share/icons
   ```
 
 图标推荐 (MacOS MOD)：https://www.gnome-look.org/p/1241071/
+
+- Cursors:  https://www.gnome-look.org/p/1241071/
 
 **How to use (使用)：**
 
