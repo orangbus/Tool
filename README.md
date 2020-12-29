@@ -349,14 +349,11 @@ deepin-wine系列的举例如下：
 
 - 微信：/opt/deepinwine/apps/Deepin-WeChat/run.sh
 
-------
+- WPS：
 
-WPS：
- /usr/bin/wps
- /usr/bin/wpp
- /usr/bin/et
-
-------
+   /usr/bin/wps
+   /usr/bin/wpp
+   /usr/bin/et
 
 Jetbrain系列举例如下：（最好切换到相应的目录查看文件是否存在）
 
