@@ -57,22 +57,19 @@ sudo pacman -Syyu && sudo pacman -S archlinuxcn-keyring
 - nodejs
 
   ```
-  sudo pacman -S nodejs
-  sudo pacman -S npm //有时候npm命令失效可以这样一下，简单粗暴
+  sudo pacman -S nodejs npm
   ```
-
+  
 - cnpm
 
   ```
-  npm install -g cnpm --registry=https://registry.npm.taobao.org
-  cnpm sync connect
+  npm install -g cnpm --registry=https://registry.npm.taobao.org && cnpm sync connect
   ```
-
+  
 - php
 
   ```
-  sudo pacman -S php
-  sudo pacman -S mysql
+  sudo pacman -S php mysql
   ```
 
 至于其他嘛，看自己的需求安装，一般情况下很多东西Manjaro都配置好了，而且是最新的。
@@ -115,7 +112,7 @@ ZSH_THEME="robbyrussell"
 ### 配置自动提示:[zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md) 
 
 ```bash
-git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions --depth 1
 ```
 
 在`~/.zshrc` 中添加
