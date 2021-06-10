@@ -209,19 +209,30 @@ pactree package_name          # 显示软件的依赖树
 
 # 软件推荐
 
-## autojump
+## Chrome Or Google
 
-可以对目录直接跳转，不用再 `cd /video/xxxx/canglaoshi` ,可以直接 `canglaoshi` 就直接跳转了。
+![](https://github.com/orangbus/Tool/blob/master/images/chrome.jpeg?raw=true)   
 
-## Eog 看图
-
+```bash
+sudo pacman -S chromium
+sudo pacman -S google-chrome
 ```
-sudo pacman -S eog
+
+## [WeChat](https://github.com/geeeeeeeeek/electronic-wechat) 
+
+官方版本：wechat_uos
+
+也可使使用下面的安装包
+
+```bash
+sudo pacman -S electronic-wechat
+# or
+yay electronic-wechat #选 1 -> q -> y
 ```
 
-## qv2ray
+![](https://cloud.githubusercontent.com/assets/7262715/14876747/ff691ade-0d49-11e6-8435-cb1fac91b3c2.png) 
 
-科学上网，SS 用户可以用 `shadowsocks-qt5` 或者 `electron-ssr` ,新手可以看 Google 文件夹。
+## 
 
 ## PhpStorm
 
@@ -240,25 +251,6 @@ Phpstorm激活：参考【JetBrains】文件夹。
 sudo rm -rf ~/.PhpStorm2019.3/config/eval
 sudo rm -rf ~/.WebStorm2019.3/config/eval
 # 其他软件也一样
-```
-
-## [WeChat](https://github.com/geeeeeeeeek/electronic-wechat) 
-
-```bash
-sudo pacman -S electronic-wechat
-# or
-yay electronic-wechat #选 1 -> q -> y
-```
-
-![](https://cloud.githubusercontent.com/assets/7262715/14876747/ff691ade-0d49-11e6-8435-cb1fac91b3c2.png) 
-
-## Chrome Or Google
-
-![](https://github.com/orangbus/Tool/blob/master/images/chrome.jpeg?raw=true)   
-
-```bash
-sudo pacman -S chromium
-sudo pacman -S google-chrome
 ```
 
 ## OBS
@@ -381,6 +373,16 @@ Jetbrain系列举例如下：（最好切换到相应的目录查看文件是否
 sudo pacman -S nutstore
 ```
 
+有时候我们安装好了却无法打开的情况， 打开终端，修改这个文件
+
+```
+vim ~/.nutstore/dist/conf/nutstore.properties
+#enable webUl when it is possible 
+webui.enable=true 修改为 webui.enable=false
+```
+
+## Typora 
+
 个人认为最好用的markdown编辑器之一
 
 ![](https://github.com/orangbus/Tool/blob/master/images/typora.png?raw=true) 
@@ -414,6 +416,17 @@ pip3 -v
 
 ```bash
 pip3 install you-get 
+```
+
+## todesk远程工具
+
+链接地址：https://bbs.todesk.com/thread-500-1-1.html
+
+软件包下载地址：https://dl.todesk.com/linux/todesk_1.2.5_x86_64.pkg.tar.zst
+安装命令:
+
+```bash
+sudo pacman -U todesk_1.2.5_x86_64.pkg.tar.zst
 ```
 
 ## 命令助手：[Tldr](https://github.com/tldr-pages/tldr) 
@@ -632,6 +645,20 @@ sudo pacman -S qq-linux
 看官网的介绍就已经被大佬折服了，哈哈，有兴趣的小伙伴可以去看看。
 
 可以看看H-Player:  https://github.com/ZyqGitHub1/h-player-v2
+
+## autojump
+
+可以对目录直接跳转，不用再 `cd /video/xxxx/canglaoshi` ,可以直接 `canglaoshi` 就直接跳转了。
+
+## Eog 看图
+
+```
+sudo pacman -S eog
+```
+
+## qv2ray
+
+科学上网，SS 用户可以用 `shadowsocks-qt5` 或者 `electron-ssr` ,新手可以看 Google 文件夹。
 
 ## vim配置推荐
 
