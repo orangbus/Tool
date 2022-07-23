@@ -272,57 +272,27 @@ sudo pacman -S netease-cloud-music
 ## 搜狗输入法
 
 ```bash
-sudo pacman -S fcitx-sogoupinyin fcitx-im fcitx-configtool
-yaourt -S fcitx-qt4
+# 安装一下 yay
+sudo pacman -S yay
 
-sudo vi ~/.xprofile //添加一下内容
-－－－－－－－－－－－－－－－－－－
+# 安装sougou输入法
+yay -S fcitx-im fcitx-configtool fcitx-sogoupinyin
+
+#修改配置文件
+sudo vim /etc/environment
+# 在末尾处追加
+
 export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
-export XMODIFIERS=”@im=fcitx”
-－－－－－－－－－－－－－－－－－－
-没有生效的话注销一下系统就ＯＪＢＫ了!!!
+export XMODIFIERS="@im=fcitx"
+
+# 没有生效的话注销一下系统就ＯＪＢＫ了!!!
+reboot
 ```
 
-```bash
-简化版本：
-sudo pacman -S archlinuxcn-keyring
-sudo pacman -S fcitx-im fcitx-configtool fcitx-gtk2 fcitx-gtk3 fcitx-qt4 fcitx-qt5 libidn fcitx-sogoupinyin fcitx-googlepinyin
+如何在 Jetbrain 软件中输入汉字
 
-mkdir ~/.config/autostart
-cp /etc/xdg/autostart/fcitx-autostart.desktop ~/.config/autostart/
-
-echo "GTK_IM_MODULE=fcitx
-QT_IM_MODULE=fcitx
-XMODIFIERS=@im=fcitx" > .pam_environment
-
-echo "export GTK_IM_MODULE=fcitx
-export QT_IM_MODULE=fcitx
-export XMODIFIERS=@im=fcitx" > .xprofile
-```
-
-Ｐｓ：搜狗拼音安装错误处理
-
-１、`sduo pacman -S fcitx-sogoupinyin` 提示找不到安装包
-
-　　`/etc/pacman.conf` 源文件有问题，可以尝试换一个源
-
-2、安装成功后只能在部分应用上打字
-
-　　`\～.xprofile` 文件配置不正确
-
-3、搜狗输入法异常！请删除.config/SogouPY 并重启的情况
-
-​	安装下qt4就解决了。
-
-​	`yaourt -S fcitx-qt4` //建议安装一下
-
-4、如果想要安装搜狗皮肤，直接到搜狗皮肤官网下载自己喜欢的皮肤，选中下载的皮肤右键【用 搜狗拼音】打开即可，没有生效重启就有了。
-
-5、安装 部分软件后无法输入中文-环境变量设置
-
-一般来说到了这步，fcitx在绝大部分的软件中是可以正常使用的。只是在`wps`、`Qt`、`jetbrains全家桶`、`deepin-TIM`、`deepin-wechat` `deepin.com.qq.im` 等软件中无法使用中文输入。
- 针对以上软件，在下列对应文件中单独添加如下环境变量：【引号是英文状态下输入的，中文无效】
+1、打开软件的安装目录，将下面的配置复制到对应的文件中粘贴即可。
 
 ```bash
 export XMODIFIERS="@im=fcitx"
@@ -330,21 +300,7 @@ export GTK_IM_MODULE="fcitx"
 export QT_IM_MODULE="fcitx"
 ```
 
-------
-
-deepin-wine系列的举例如下：
-
-- TIM：/opt/deepinwine/apps/Deepin-TIM/run.sh
-
-- 微信：/opt/deepinwine/apps/Deepin-WeChat/run.sh
-
-- WPS：
-
-   /usr/bin/wps
-   /usr/bin/wpp
-   /usr/bin/et
-
-Jetbrain系列举例如下：（最好切换到相应的目录查看文件是否存在）
+举例
 
 - Goland:
 
@@ -364,7 +320,7 @@ Jetbrain系列举例如下：（最好切换到相应的目录查看文件是否
   sudo vim /opt/webstorm/bin/webstorm.sh
   ```
 
-如果出现问题的软件不再我所述范围内的话，可以先尝试寻找其运行的sh文件，如果找不到，再尝试在/usr/bin文件夹中寻找。
+推荐使用toolbox进行安装，软件破解教程可查看：[https://doc.orangbus.cn](https://doc.orangbus.cn) 
 
 
 ## 坚果云（网盘）
