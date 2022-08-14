@@ -2,7 +2,7 @@
 
 ![](https://github.com/orangbus/Tool/blob/master/images/orangbus.png?raw=true) 
 
-- 假设你已经安装了，如果没有的话就去 [Manjaro官网](https://manjaro.org/) 下载一个  `KDE Edition` 版本，找一个专门刻录linux系统的软件([Rufus](https://rufus.ie/en_IE.html))刻录到U盘上（不要用常规刻录window的软件刻录，当然年轻爱折腾请随意），开机F12 or F2 ，选择U盘启动即可安装成功了。(最后发现还是manjaro-gnome好用，哈哈！！！)
+- 假设你已经安装了，如果没有的话就去 [Manjaro官网](https://manjaro.org/) 下载一个  `KDE Edition` 版本，找一个专门刻录linux系统的软件([Rufus](https://rufus.ie/zh ) | [etcher](https://www.balena.io/etcher/)) 刻录到U盘上（不要用常规刻录window的软件刻录，当然年轻爱折腾请随意），开机F12 or F2 ，选择U盘启动即可安装成功了。(最后发现还是manjaro-gnome好用，哈哈！！！)
 - 如何你觉得本教程还不错欢迎分享 Star.
 [TOC]
 
@@ -220,38 +220,23 @@ sudo pacman -S google-chrome
 
 ## [WeChat](https://github.com/geeeeeeeeek/electronic-wechat) 
 
-官方版本：wechat_uos
-
-也可使使用下面的安装包
+官方版本：[wechat_uos](https://aur.archlinux.org/packages/wechat-uos) 
 
 ```bash
-sudo pacman -S electronic-wechat
-# or
-yay electronic-wechat #选 1 -> q -> y
+sudo pacman -S wechat-uos
 ```
 
 ![](https://cloud.githubusercontent.com/assets/7262715/14876747/ff691ade-0d49-11e6-8435-cb1fac91b3c2.png) 
 
-## 
+## 开发工具-toolbox
 
-## PhpStorm
+安装toolbox: [https://www.jetbrains.com/zh-cn/toolbox-app/](https://www.jetbrains.com/zh-cn/toolbox-app/) 
 
-```bash
-yaourt phpstorm
-yay -S phpstorm
-```
+安装这一个即可管理其它软件，非常方便，推荐使用。
 
-![phpstorm](https://github.com/orangbus/Tool/blob/master/images/phpstorm.jpeg?raw=true)  
+![phpstorm](https://github.com/orangbus/Tool/blob/master/images/toolbox.png?raw=true)  
 
-Phpstorm激活：参考【JetBrains】文件夹。
-
-如果你懒得找，可以使用无限期试用，当我们第一次安装的时候，点击免费试用30天，30天到期之后删除一下文件即可
-
-```
-sudo rm -rf ~/.PhpStorm2019.3/config/eval
-sudo rm -rf ~/.WebStorm2019.3/config/eval
-# 其他软件也一样
-```
+全套激活方法：[https://doc.orangbus.cn/MyNote/jetbrains%20.html](https://doc.orangbus.cn/MyNote/jetbrains%20.html) 
 
 ## OBS
 
